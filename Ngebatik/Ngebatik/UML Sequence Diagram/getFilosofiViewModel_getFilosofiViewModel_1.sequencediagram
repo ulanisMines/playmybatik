@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="874bf8da-5ce4-4e8d-8a94-ac0cad91ff1b" name="getFilosofiViewModel_getFilosofiViewModel" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="4123788e-cfe4-407f-9b99-e71551665de4" name="getFilosofiViewModel_getFilosofiViewModel" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="b097434a-e461-4ed7-9953-859639e59de8" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="383e3a9f-38f6-4bb2-9ee2-43a866d80e5c" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="b6cb891e-3f63-46a0-8eb5-620eb79fe4ae" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="c8e0d78a-1b2a-4cfc-b421-5ba02f24de9e" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="d1654d4e-9b1a-4340-8eae-f033b1cc531a" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="fd378a8f-cfc3-4ced-bdd4-5f392dff680b" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="f3c2026d-644b-4b01-af9d-1c55f5546f24" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="20faa762-ab2c-40f2-80af-fa4a3a4f2df9" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="a480665d-4c56-4668-97a9-8ac95723a6a4" LastKnownName="ExecutionOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="dc85d721-f43a-4f75-8e0b-72ed74ab23ed" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="a44bc7ca-f5ea-4597-b027-a16ce1711fb4" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="ba310395-8e09-4219-999e-f43768a8d11b" LastKnownName="ExecutionOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="b6cb891e-3f63-46a0-8eb5-620eb79fe4ae" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="82448788-89b6-4a17-93a7-a698a54b6bc8" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="973649f0-edf6-4f36-b8e4-e28acdc0be8c" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="c8e0d78a-1b2a-4cfc-b421-5ba02f24de9e" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="40dcb734-7459-4889-84c3-9f3c33217202" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="d90704e9-5a36-4e19-b827-c05796414b40" LastKnownName="this.getFilosofiCollection : ObservableCollection&lt;getfilosofi&gt;" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="533ed22a-f9fd-499f-84bc-d7f09bb9f93f" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="042c6e2f-f230-42c8-9221-beba9195267a" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="cd04aff3-9573-486e-bd99-5bb7b6475b21" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="1995221e-322b-490e-9e0a-80e8f6997aa3" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="042c6e2f-f230-42c8-9221-beba9195267a" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="54790143-0b55-4bd7-82ef-3b1dc6a3daac" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="d90704e9-5a36-4e19-b827-c05796414b40" LastKnownName="this.getFilosofiCollection : ObservableCollection&lt;getfilosofi&gt;" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d1654d4e-9b1a-4340-8eae-f033b1cc531a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="cd04aff3-9573-486e-bd99-5bb7b6475b21" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="d90704e9-5a36-4e19-b827-c05796414b40" LastKnownName="this.getFilosofiCollection : ObservableCollection&lt;getfilosofi&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="fd378a8f-cfc3-4ced-bdd4-5f392dff680b" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1995221e-322b-490e-9e0a-80e8f6997aa3" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="d90704e9-5a36-4e19-b827-c05796414b40" LastKnownName="this.getFilosofiCollection : ObservableCollection&lt;getfilosofi&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="533ed22a-f9fd-499f-84bc-d7f09bb9f93f" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="02000f4d-05d2-4545-b883-7fea51b12160" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="d90704e9-5a36-4e19-b827-c05796414b40" LastKnownName="this.getFilosofiCollection : ObservableCollection&lt;getfilosofi&gt;" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f3c2026d-644b-4b01-af9d-1c55f5546f24" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="0a496712-1355-4e88-bbf7-ba5cea9d444d" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="a480665d-4c56-4668-97a9-8ac95723a6a4" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="20faa762-ab2c-40f2-80af-fa4a3a4f2df9" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="25d0f9ee-9efa-401c-b098-02b55c77cd9a" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="20faa762-ab2c-40f2-80af-fa4a3a4f2df9" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="2eb2f788-0115-4249-be6b-0edcb44164b3" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="25d0f9ee-9efa-401c-b098-02b55c77cd9a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="a480665d-4c56-4668-97a9-8ac95723a6a4" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="c350d368-57c5-47ff-9570-d096008535ae" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="dc85d721-f43a-4f75-8e0b-72ed74ab23ed" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="10358cec-d3c9-48ba-add8-4f6239e8df0a" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="ba310395-8e09-4219-999e-f43768a8d11b" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="a44bc7ca-f5ea-4597-b027-a16ce1711fb4" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="36cb9074-2708-4d43-92dc-0d0a633a1f37" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="a44bc7ca-f5ea-4597-b027-a16ce1711fb4" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b9eae79e-bd0d-462b-97cb-8716b8d96b4a" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="36cb9074-2708-4d43-92dc-0d0a633a1f37" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="ba310395-8e09-4219-999e-f43768a8d11b" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="1e9da204-90cb-418e-b52a-ad5445e3b812" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="383e3a9f-38f6-4bb2-9ee2-43a866d80e5c" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="d3dcaa6b-6c10-411b-ab32-41705e2cf2b5" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" LastKnownName="this : getFilosofiViewModel" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="6b6a2445-5ff5-40a1-81c0-0911b0759524" name="this : getFilosofiViewModel" isActor="false" lifelineDisplayName="this : getFilosofiViewModel" referencedInstance="(Assembly=$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri) Namespace=Ngebatik.View_Model Type=getFilosofiViewModel ObjectInstance=&quot;Object instance 1&quot;)" referencedType="Ngebatik‎.View_Model‎.getFilosofiViewModel">
+            <referencesInternal>
+              <reference Id="dca0da33-67cf-45f4-8952-d207db9109ac" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Ngebatik.View_Model)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel)&quot;)" tag="DGQL" />
+              <reference Id="27e2f8d6-4e4c-4159-9ff6-10751dc2b5f3" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="b6cb891e-3f63-46a0-8eb5-620eb79fe4ae" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="383e3a9f-38f6-4bb2-9ee2-43a866d80e5c" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="d90704e9-5a36-4e19-b827-c05796414b40" name="this.getFilosofiCollection : ObservableCollection&lt;getfilosofi&gt;" isActor="false" lifelineDisplayName="this.getFilosofiCollection : ObservableCollection&lt;getfilosofi&gt;" referencedInstance="(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.dll&quot; Namespace=System.Collections.ObjectModel Type=(Name=ObservableCollection GenericParameterCount=1 GenericArguments=[(Assembly=$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri) Namespace=Ngebatik.Kelas Type=getfilosofi)]) ObjectInstance=&quot;Object instance 2&quot;)" referencedType="System‎.Collections‎.ObjectModel‎.ObservableCollection‎&lt;getfilosofi‎&gt;">
+            <referencesInternal>
+              <reference Id="659c7e9a-2770-435c-9dcd-22825405194c" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=System.Collections.ObjectModel)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.dll&amp;quot; Namespace=System.Collections.ObjectModel Type=(Name=ObservableCollection GenericParameterCount=1))&quot;)" tag="DGQL" />
+              <reference Id="9b1b5fee-69cf-4bf6-a183-f21d7ddfa6ef" handle="(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.dll&quot; Namespace=System.Collections.ObjectModel Type=(Name=ObservableCollection GenericParameterCount=1))" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="042c6e2f-f230-42c8-9221-beba9195267a" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="533ed22a-f9fd-499f-84bc-d7f09bb9f93f" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="be750c3c-e487-459e-aeba-186e24b48e6b" name="Create getFilosofiViewModel" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="849b728b-9073-45a5-9f72-7b4d810e1204" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Ngebatik.View_Model)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="e0282f1c-ffe5-4ebf-bf7f-f50ad20e7d17" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="973649f0-edf6-4f36-b8e4-e28acdc0be8c" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="c8e0d78a-1b2a-4cfc-b421-5ba02f24de9e" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="4433b2fd-4a4e-43d9-8f35-dfdfce27dbfe" name="Create ObservableCollection‎&lt;getfilosofi‎&gt;" messageKind="Complete" messageSort="CreateMessage" createSelfMessage="false" signatureText="new ObservableCollection&lt;getfilosofi&gt;()">
+            <referencesInternal>
+              <reference Id="d44eca8f-0cfe-47ba-a607-89d9b30df172" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=System.Collections.ObjectModel)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.dll&amp;quot; Namespace=System.Collections.ObjectModel Type=(Name=ObservableCollection GenericParameterCount=1))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.dll&amp;quot; Namespace=System.Collections.ObjectModel Type=(Name=ObservableCollection GenericParameterCount=1) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="9f7200e8-b175-4eb5-93fe-9b758fa7b779" handle="(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.dll&quot; Namespace=System.Collections.ObjectModel Type=(Name=ObservableCollection GenericParameterCount=1) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="d1654d4e-9b1a-4340-8eae-f033b1cc531a" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="cd04aff3-9573-486e-bd99-5bb7b6475b21" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="baf59592-45b5-44f8-a8ca-bea514dad9b3" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1995221e-322b-490e-9e0a-80e8f6997aa3" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="fd378a8f-cfc3-4ced-bdd4-5f392dff680b" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="9dc2d6f9-2cee-48e2-9bd2-375c45cb69e9" name="Create ViewModelBase" messageKind="Complete" messageSort="CreateMessage" createSelfMessage="true">
+            <referencesInternal>
+              <reference Id="89f4751f-c6ca-4d02-8671-3f1545e2d9f8" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=PlayMyBatik.Common)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=PlayMyBatik.Common Type=ViewModelBase)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=PlayMyBatik.Common Type=ViewModelBase Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="87f15703-6b1d-4b6b-a159-c711b9ff7191" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=PlayMyBatik.Common Type=ViewModelBase Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="f3c2026d-644b-4b01-af9d-1c55f5546f24" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="25d0f9ee-9efa-401c-b098-02b55c77cd9a" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="3854360c-be16-43c1-b0d3-2ce0db84d85f" name="LoadURL" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="LoadURL()">
+            <referencesInternal>
+              <reference Id="39d6d460-a1df-4a00-9ae2-b7ad53857b11" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Ngebatik.View_Model)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel Member=LoadURL)&quot;)" tag="DGQL" />
+              <reference Id="6ed316ab-9c0e-48e1-aa23-2f741c6711e5" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=Ngebatik.View_Model Type=getFilosofiViewModel Member=LoadURL)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="dc85d721-f43a-4f75-8e0b-72ed74ab23ed" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="36cb9074-2708-4d43-92dc-0d0a633a1f37" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="82448788-89b6-4a17-93a7-a698a54b6bc8" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="d3dcaa6b-6c10-411b-ab32-41705e2cf2b5" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="54790143-0b55-4bd7-82ef-3b1dc6a3daac" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="02000f4d-05d2-4545-b883-7fea51b12160" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="2eb2f788-0115-4249-be6b-0edcb44164b3" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="c350d368-57c5-47ff-9570-d096008535ae" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b9eae79e-bd0d-462b-97cb-8716b8d96b4a" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="1e9da204-90cb-418e-b52a-ad5445e3b812" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>

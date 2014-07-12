@@ -1,0 +1,30 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Ngebatik.PageNyorek"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False" BorderBrush="#FFCB2323">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Asset/in game screen larger.png"/>
+        </Grid.Background>
+        <TextBlock Margin="149,90,128,0" Text="Ingatlah pola gambar batik ini dan gambar garis dasar terlebih dahulu" TextWrapping="Wrap" FontFamily="/Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="#FF0E0D0D" FontSize="24" HorizontalAlignment="Center" TextAlignment="Center" />
+        <Image x:Name="imageBatik" HorizontalAlignment="Center" Height="232" VerticalAlignment="Bottom" Width="400" Margin="194,0,206,85" Source=""/>
+        <Button Content="Ngelowong" HorizontalAlignment="Left" Margin="303,395,0,0" VerticalAlignment="Top" Height="69" Width="202" Foreground="#FF020101" BorderThickness="0" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

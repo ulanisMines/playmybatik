@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="9408db1a-ee90-4978-a37c-5509f2752b3c" name="Sobel_CitraSobel" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="5c750993-ae90-4215-9562-f8944b17d7e4" name="Sobel_CitraSobel" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="a022b6e1-b581-4f7f-8666-d0a5a9bfc855" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="b3344229-f50a-4ed1-a7c3-5f8625a4ea45" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="838baa12-ac04-414b-8adb-093f6d8d3a7f" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="686e89bd-68ad-422e-89b8-46bd753d75c8" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4371d82b-9d3a-491f-95f0-84b11075cf36" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="1271e696-8301-4412-addb-17fa44b44069" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="1067513d-3401-4cde-b903-08c9285e6dbc" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="248a587f-83de-4b96-9099-aabd6c61baaa" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="05ddeff2-4507-4cfd-9d82-2c1a89b7da87" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="e21ff2ac-f2a6-4810-ab8f-368841991fa2" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="66ec57a1-068d-4cc2-a749-9c47707179fc" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="b884333c-8cd3-441c-b63d-9ba2c60e0ed4" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="e07aadc6-2d14-48ac-80c0-a0c9f97f7d24" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="059529b2-a6ab-46ee-bb19-020039537c8a" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="8bcccce9-fe8d-419b-a272-47012e42ea94" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="15bb96c7-f119-4407-9847-7736bd04f5a8" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="47ecb047-5605-48ff-8a2c-1094d2257237" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="fac6767a-63f8-43c5-b70d-bb8754e51a80" LastKnownName="OperandOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="838baa12-ac04-414b-8adb-093f6d8d3a7f" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="14d64af1-2816-4308-9d7e-6772b84e4ba2" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="10ca3cc5-74de-4323-94fd-1971a1e5ff9c" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="686e89bd-68ad-422e-89b8-46bd753d75c8" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment Id="d6425364-5ac0-4b3c-a301-9de017e133b4" name="CombinedFragment1" interactionOperator="Loop" customInteractionOperator="Loop">
+            <coveredLifelines>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="adcf8e8e-e1c6-48ba-be35-90c8ee61213e" name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+                </coveredLifelines>
+                <fragments>
+                  <combinedFragment Id="f77e220c-6a38-4436-bb40-da5cdf850cc9" name="CombinedFragment1" interactionOperator="Loop" customInteractionOperator="Loop">
+                    <coveredLifelines>
+                      <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand Id="7c2bcf28-df90-4568-846b-7e3640990409" name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+                        </coveredLifelines>
+                        <fragments>
+                          <combinedFragment Id="ef7859a4-4632-419c-a516-36039e32ff99" name="CombinedFragment1" interactionOperator="Alt" customInteractionOperator="If">
+                            <coveredLifelines>
+                              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+                            </coveredLifelines>
+                            <operands>
+                              <interactionOperand Id="051cd8bc-b98f-4e67-9c7f-fcbf42a86a78" name="InteractionOperand1">
+                                <coveredLifelines>
+                                  <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+                                </coveredLifelines>
+                                <guard>
+                                  <interactionConstraint Id="e6713e33-b5fe-42db-b1db-cad562448af9" guardText="if (new_rx * new_rx + new_ry * new_ry &gt; limit || new_gx * new_gx + new_gy * new_gy &gt; limit || new_bx * new_bx + new_by * new_by &gt; limit)" />
+                                </guard>
+                                <operandOccurrenceSpecifications>
+                                  <operandOccurrenceSpecificationMoniker Id="1067513d-3401-4cde-b903-08c9285e6dbc" LastKnownName="OperandOccurrenceSpecification" />
+                                  <operandOccurrenceSpecificationMoniker Id="66ec57a1-068d-4cc2-a749-9c47707179fc" LastKnownName="OperandOccurrenceSpecification" />
+                                </operandOccurrenceSpecifications>
+                              </interactionOperand>
+                              <interactionOperand Id="03d025b1-10a3-4f54-bbcb-cc5946f8c6e0" name="InteractionOperand2">
+                                <coveredLifelines>
+                                  <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+                                </coveredLifelines>
+                                <guard>
+                                  <interactionConstraint Id="bc0cca5b-6c67-40b5-9a6f-14aa594d94a7" guardText="else" />
+                                </guard>
+                                <operandOccurrenceSpecifications>
+                                  <operandOccurrenceSpecificationMoniker Id="b884333c-8cd3-441c-b63d-9ba2c60e0ed4" LastKnownName="OperandOccurrenceSpecification" />
+                                  <operandOccurrenceSpecificationMoniker Id="15bb96c7-f119-4407-9847-7736bd04f5a8" LastKnownName="OperandOccurrenceSpecification" />
+                                </operandOccurrenceSpecifications>
+                              </interactionOperand>
+                            </operands>
+                          </combinedFragment>
+                        </fragments>
+                        <guard>
+                          <interactionConstraint Id="0708125c-35b8-4a16-acca-64d3bc9e57de" guardText="for (int j = 1;j &lt; height - 1; j++)">
+                            <maxInt>
+                              <literalString Id="fcb77c1c-4068-4f43-bc03-76f9061ad455" name="LiteralString1" />
+                            </maxInt>
+                            <minInt>
+                              <literalString Id="73309dc4-4a03-4cee-9bcc-8d0649e1ae30" name="LiteralString2" />
+                            </minInt>
+                          </interactionConstraint>
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker Id="1271e696-8301-4412-addb-17fa44b44069" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="47ecb047-5605-48ff-8a2c-1094d2257237" LastKnownName="OperandOccurrenceSpecification" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                </fragments>
+                <guard>
+                  <interactionConstraint Id="f4d4e573-2a02-48fd-bffe-35ff9540466c" guardText="for (int i = 1;i &lt; width - 1; i++)">
+                    <maxInt>
+                      <literalString Id="5cb1ac77-a6e1-45d6-a194-25b306f31c27" name="LiteralString1" />
+                    </maxInt>
+                    <minInt>
+                      <literalString Id="e21b1059-bf45-44e3-8fc2-f85600108170" name="LiteralString2" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="4371d82b-9d3a-491f-95f0-84b11075cf36" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="fac6767a-63f8-43c5-b70d-bb8754e51a80" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="4371d82b-9d3a-491f-95f0-84b11075cf36" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1271e696-8301-4412-addb-17fa44b44069" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1067513d-3401-4cde-b903-08c9285e6dbc" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="248a587f-83de-4b96-9099-aabd6c61baaa" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="70687dba-7b7c-4172-a561-4dc9b0902a31" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="e21ff2ac-f2a6-4810-ab8f-368841991fa2" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="05ddeff2-4507-4cfd-9d82-2c1a89b7da87" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="fc7cbe04-bf9a-43fe-b77b-c16dd8ed3b4b" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="05ddeff2-4507-4cfd-9d82-2c1a89b7da87" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b2a7bc42-e973-4eba-a5b4-2228cdc491fa" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="fc7cbe04-bf9a-43fe-b77b-c16dd8ed3b4b" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="e21ff2ac-f2a6-4810-ab8f-368841991fa2" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="d4665650-afce-4c76-887d-2048362a3c2d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="66ec57a1-068d-4cc2-a749-9c47707179fc" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="b884333c-8cd3-441c-b63d-9ba2c60e0ed4" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e07aadc6-2d14-48ac-80c0-a0c9f97f7d24" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="07a0c8d5-a583-4be2-8829-aa7123f1d4a1" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="8bcccce9-fe8d-419b-a272-47012e42ea94" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="059529b2-a6ab-46ee-bb19-020039537c8a" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="65277893-6eb2-4d62-a949-b4fb03ba1ed9" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="059529b2-a6ab-46ee-bb19-020039537c8a" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="884b9e9b-20dd-4c0c-a2f5-4df4291573e9" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="65277893-6eb2-4d62-a949-b4fb03ba1ed9" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="8bcccce9-fe8d-419b-a272-47012e42ea94" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="5a106957-0556-4dec-909f-a8ae3abaaf9b" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="15bb96c7-f119-4407-9847-7736bd04f5a8" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="47ecb047-5605-48ff-8a2c-1094d2257237" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="fac6767a-63f8-43c5-b70d-bb8754e51a80" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="b3344229-f50a-4ed1-a7c3-5f8625a4ea45" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="5a41768f-6701-4794-97f4-e928a888728c" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" LastKnownName="this : Sobel" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="8270edec-3644-4a6b-b9d7-0c21ee1588f4" name="this : Sobel" isActor="false" lifelineDisplayName="this : Sobel" referencedInstance="(Assembly=$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri) Namespace=Ngebatik.Kelas Type=Sobel ObjectInstance=&quot;Object instance 2&quot;)" referencedType="Ngebatik‎.Kelas‎.Sobel">
+            <referencesInternal>
+              <reference Id="0a6a0e72-0f19-4d22-a774-2f41d5958905" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Ngebatik.Kelas)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.Kelas Type=Sobel)&quot;)" tag="DGQL" />
+              <reference Id="11635174-bcf5-4417-aa3b-d4ac37199e9c" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=Ngebatik.Kelas Type=Sobel)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="838baa12-ac04-414b-8adb-093f6d8d3a7f" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="b3344229-f50a-4ed1-a7c3-5f8625a4ea45" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="ca906bb4-30f0-4739-a78f-d8d9553b5cde" name="CitraSobel" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="49d409c1-c2eb-4265-aacb-caa5956f1c2d" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Ngebatik.Kelas)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.Kelas Type=Sobel)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.Kelas Type=Sobel Member=(Name=CitraSobel OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.Windows.dll&amp;quot; Namespace=System.Windows.Media.Imaging Type=WriteableBitmap)]))&quot;)" tag="DGQL" />
+              <reference Id="34b5c7be-fee2-42fc-8226-43d864a356b4" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=Ngebatik.Kelas Type=Sobel Member=(Name=CitraSobel OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/System.Windows.dll&quot; Namespace=System.Windows.Media.Imaging Type=WriteableBitmap)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="10ca3cc5-74de-4323-94fd-1971a1e5ff9c" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="686e89bd-68ad-422e-89b8-46bd753d75c8" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="b0bc78c5-2ca3-4c55-af5e-3e05ef66075a" name="SetPikselCitra" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="SetPikselCitra(i, j, (byte)alpha, 0, 0, 0)">
+            <referencesInternal>
+              <reference Id="7af25d5e-2233-4ffb-babe-aa17b7442d94" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Ngebatik.Kelas)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.Kelas Type=Sobel)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.Kelas Type=Sobel Member=(Name=SetPikselCitra OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Byte),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32)]))&quot;)" tag="DGQL" />
+              <reference Id="1ba78961-ee84-49ad-9a0c-c2040a381b2c" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=Ngebatik.Kelas Type=Sobel Member=(Name=SetPikselCitra OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Byte),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="248a587f-83de-4b96-9099-aabd6c61baaa" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="fc7cbe04-bf9a-43fe-b77b-c16dd8ed3b4b" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="1ae1889a-3756-4892-9c7f-2b524ed790a7" name="SetPikselCitra" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="SetPikselCitra(i, j, (byte)alpha, 255, 255, 255)">
+            <referencesInternal>
+              <reference Id="ac498ade-c789-4c5c-b2d8-6c78d47a57a0" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Ngebatik.Kelas)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.Kelas Type=Sobel)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&amp;quot; Namespace=Ngebatik.Kelas Type=Sobel Member=(Name=SetPikselCitra OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Byte),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&amp;quot; Namespace=System Type=Int32)]))&quot;)" tag="DGQL" />
+              <reference Id="bfe25527-8f86-498f-9bf9-499b8e47df62" handle="(Assembly=&quot;$(42809582-4e41-426d-b962-eca536506f2b.OutputPathUri)&quot; Namespace=Ngebatik.Kelas Type=Sobel Member=(Name=SetPikselCitra OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Byte),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/WindowsPhone/v8.0/mscorlib.dll&quot; Namespace=System Type=Int32)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="e07aadc6-2d14-48ac-80c0-a0c9f97f7d24" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="65277893-6eb2-4d62-a949-b4fb03ba1ed9" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="14d64af1-2816-4308-9d7e-6772b84e4ba2" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="5a41768f-6701-4794-97f4-e928a888728c" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b2a7bc42-e973-4eba-a5b4-2228cdc491fa" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="d4665650-afce-4c76-887d-2048362a3c2d" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="884b9e9b-20dd-4c0c-a2f5-4df4291573e9" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="5a106957-0556-4dec-909f-a8ae3abaaf9b" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>
