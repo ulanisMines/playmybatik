@@ -19,7 +19,7 @@
         </Grid.Background>
         <TextBlock Margin="149,90,128,0" Text="Ingatlah pola gambar batik ini dan gambar garis dasar terlebih dahulu" TextWrapping="Wrap" FontFamily="/Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="#FF0E0D0D" FontSize="24" HorizontalAlignment="Center" TextAlignment="Center" />
         <Image x:Name="imageBatik" HorizontalAlignment="Center" Height="232" VerticalAlignment="Bottom" Width="400" Margin="194,0,206,85" Source=""/>
-        <Button Content="Ngelowong" HorizontalAlignment="Left" Margin="303,395,0,0" VerticalAlignment="Top" Height="69" Width="202" Foreground="#FF020101" BorderThickness="0" Click="Button_Click_1">
+        <Button x:Name="ButtonNgelowong" Content="Ngelowong" HorizontalAlignment="Left" Margin="303,395,0,0" VerticalAlignment="Top" Height="69" Width="202" Foreground="#FF020101" BorderThickness="0" Click="Button_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="UniformToFill"/>
             </Button.Background>

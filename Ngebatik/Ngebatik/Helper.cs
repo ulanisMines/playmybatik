@@ -11,5 +11,7 @@ namespace Ngebatik
         public const String BASE = "http://playmybatik.com/";
         public const String img_BASE = "http://playmybatik.com/modul/mod_filosofi_batik/img_batik/";
         public static string Level = "";
+
+        public static string GambarBatik { get; set; }
     }
 }

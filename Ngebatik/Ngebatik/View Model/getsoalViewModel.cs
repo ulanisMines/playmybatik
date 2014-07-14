@@ -14,7 +14,7 @@ using System.Windows.Input;
 
 namespace Ngebatik.View_Model
 {
-    class getsoalViewModel : ViewModelBase
+    public class getsoalViewModel : ViewModelBase
     {
         private ObservableCollection<getsoal> getSoalCollection  = new ObservableCollection<getsoal>();
         private String opsiA;

@@ -23,16 +23,19 @@ namespace Ngebatik
             //GenerateSoalBatik();
         }
 
-        private void GenerateSoalBatik()
-        {
-            bmp = new System.Windows.Media.Imaging.BitmapImage(new Uri(@"Soal/batik soal 1.jpg", UriKind.RelativeOrAbsolute));
-            this.imageBatik.Source = bmp;
-        }
+       // private void GenerateSoalBatik()
+        //{
+          //  bmp = new System.Windows.Media.Imaging.BitmapImage(new Uri(@"Soal/batik soal 1.jpg", UriKind.RelativeOrAbsolute));
+            //this.imageBatik.Source = bmp;
+       // }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
-            
-            NavigationService.Navigate(new Uri("/NyorekPage.xaml?gambar="+gambar, UriKind.Relative));
+            string x = gambar.Substring(gambar.LastIndexOf('/')+1);
+            MessageBox.Show(x);
+            Helper.GambarBatik = x;
+            NavigationService.Navigate(new Uri("/NyorekPage.xaml?gambar=" + x, UriKind.Relative));
+                      
         }
       
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -49,6 +52,10 @@ namespace Ngebatik
                 //PhoneApplicationService.Current.State["imageBatik"] = bmp;
             }
         }
+
+        
+
+     
 
        
 

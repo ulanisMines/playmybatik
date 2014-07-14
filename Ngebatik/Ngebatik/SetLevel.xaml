@@ -55,17 +55,17 @@
             <Grid.Background>
                 <ImageBrush Stretch="Fill"/>
             </Grid.Background>
-            <Button Content="" HorizontalAlignment="Left" Margin="460,-192,0,0" VerticalAlignment="Top" Height="178" Width="206" BorderThickness="0" Click="Button_Sulit">
+            <Button x:Name="Button_Sulit" Content="" HorizontalAlignment="Left" Margin="460,-192,0,0" VerticalAlignment="Top" Height="178" Width="206" BorderThickness="0" Click="Button_SulitOnClick">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Asset/button/hard.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="B" Content="" HorizontalAlignment="Left" Margin="18,-192,0,0" VerticalAlignment="Top" BorderThickness="0" Width="206" Height="178" Click="Button_Mudah">
+            <Button x:Name="Button_Mudah" Content="" HorizontalAlignment="Left" Margin="18,-192,0,0" VerticalAlignment="Top" BorderThickness="0" Width="206" Height="178" Click="Button_MudahOnClick">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Asset/button/easy.png" />
                 </Button.Background>
             </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="235,-192,0,0" VerticalAlignment="Top" BorderThickness="0" Width="206" Height="178" Click="Button_Sulit">
+            <Button x:Name="Button_Sedang" Content="" HorizontalAlignment="Left" Margin="235,-192,0,0" VerticalAlignment="Top" BorderThickness="0" Width="206" Height="178" Click="Button_SedangOnClick">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Asset/button/medium.png"/>
                 </Button.Background>

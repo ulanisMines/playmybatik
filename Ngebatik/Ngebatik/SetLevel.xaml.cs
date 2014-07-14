@@ -17,27 +17,30 @@ namespace Ngebatik
             InitializeComponent();
         }
 
-       
-        private void Button_Sedang(object sender, RoutedEventArgs e)
-        {
-            Helper.Level = "Medium";
-            NavigationService.Navigate(new Uri("/PageRandomSoal.xaml?Level=Medium", UriKind.Relative));
-        }
 
-        private void Button_Mudah(object sender, RoutedEventArgs e)
+        public string Level { get; set; }
+
+    
+               private void Button_MudahOnClick(object sender, RoutedEventArgs e)
         {
             Helper.Level = "Easy";
             NavigationService.Navigate(new Uri("/PageRandomSoal.xaml?Level=Easy", UriKind.Relative));
         }
 
-        private void Button_Sulit(object sender, RoutedEventArgs e)
+        private void Button_SedangOnClick(object sender, RoutedEventArgs e)
+        {
+            Helper.Level = "Medium";
+            NavigationService.Navigate(new Uri("/PageRandomSoal.xaml?Level=Medium", UriKind.Relative));
+        }
+
+        private void Button_SulitOnClick(object sender, RoutedEventArgs e)
         {
             Helper.Level = "Hard";
             NavigationService.Navigate(new Uri("/PageRandomSoal.xaml?Level=Hard", UriKind.Relative));
         }
 
-      
+       
 
-        public string Level { get; set; }
+      
     }
 }

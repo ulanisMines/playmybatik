@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Threading;
 using System.Threading;
 using Ngebatik.Kelas;
+using Newtonsoft.Json.Linq;
+using System.Globalization;
+
 
 namespace Ngebatik
 {
@@ -25,7 +28,7 @@ namespace Ngebatik
         const int height = 280;
         WriteableBitmap wbEdited, wbHasilSobel;
         BitmapImage bmpBatik;
-        Kelas.Sobel sobelOperator = new Kelas.Sobel();
+        //Kelas.Sobel sobelOperator = new Kelas.Sobel();
 
         double[] preXArray = new double[10];
         double[] preYArray = new double[10];
@@ -195,6 +198,11 @@ namespace Ngebatik
 
                 imagePolaBatik.Source = wbHasilSobel;
                 this.imageBatik.Source = bitmapGet;
+
+                LoadURL();
+                
+                   
+            
             }
             catch (Exception ez)
             {
@@ -204,6 +212,101 @@ namespace Ngebatik
             base.OnNavigatedTo(e);
         }
 
+        private Color ConvertHexStringToColour(string hexString)
+        {
+            byte a = 0;
+            byte r = 0;
+            byte g = 0;
+            byte b = 0;
+            if (hexString.StartsWith("#"))
+            {
+                hexString = hexString.Substring(1, 8);
+            }
+            a = Convert.ToByte(Int32.Parse(hexString.Substring(0, 2),
+                System.Globalization.NumberStyles.AllowHexSpecifier));
+            r = Convert.ToByte(Int32.Parse(hexString.Substring(2, 2),
+                System.Globalization.NumberStyles.AllowHexSpecifier));
+            g = Convert.ToByte(Int32.Parse(hexString.Substring(4, 2),
+                System.Globalization.NumberStyles.AllowHexSpecifier));
+            b = Convert.ToByte(Int32.Parse(hexString.Substring(6, 2), System.Globalization.NumberStyles.AllowHexSpecifier));
+            return Color.FromArgb(a, r, g, b);
+        }
+
+
+        public void LoadURL()
+        {
+            MessageBox.Show("LoadURL"+Helper.BASE + "getfilosofi.php?GambarBatik=" + Helper.GambarBatik);
+
+            WebClient wcSoalBatik = new WebClient();
+            wcSoalBatik.DownloadStringCompleted += new DownloadStringCompletedEventHandler(DownloadFilosofiBatik);
+            wcSoalBatik.DownloadStringAsync(new Uri(Helper.BASE + "getfilosofi.php?GambarBatik=" + Helper.GambarBatik));
+        }
+          private void DownloadFilosofiBatik(object sender, DownloadStringCompletedEventArgs e)
+        {
+
+            MessageBox.Show(e.Result);
+            JObject jRoot = JObject.Parse(e.Result);
+            JArray jItem = JArray.Parse(jRoot.SelectToken("result").ToString());
+            getfilosofi gf = new getfilosofi();
+            foreach (JObject item in jItem)
+            {
+                gf.idBatik = item.SelectToken("idBatik").ToString();
+                gf.NamaBatik = item.SelectToken("NamaBatik").ToString();
+                gf.GambarBatik = Helper.img_BASE + item.SelectToken("GambarBatik").ToString();
+                gf.Filosofi = item.SelectToken("Filosofi").ToString();
+                gf.idDaerah = item.SelectToken("idDaerah").ToString();
+                gf.idJenis = item.SelectToken("idJenis").ToString();
+                gf.Warna1 = item.SelectToken("Warna1").ToString();
+                gf.Warna2 = item.SelectToken("Warna2").ToString();
+                gf.Warna3 = item.SelectToken("Warna3").ToString();
+                gf.Warna4 = item.SelectToken("Warna4").ToString();
+
+                MessageBox.Show(item.ToString());
+            }
+
+             if (gf.Warna1 == null)
+            {
+                Warna1El.Visibility = Visibility.Collapsed;
+                // Warna1.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                String strColour =gf.Warna1;
+                Color myColour = ConvertHexStringToColour(strColour);
+                Warna1El.Fill = new SolidColorBrush(myColour);
+             }
+
+            if (gf.Warna2== null)
+            {
+                Warna2El.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                String strColour = gf.Warna2;
+                Color myColour = ConvertHexStringToColour(strColour);
+                Warna2El.Fill = new SolidColorBrush(myColour);
+            }
+            if (gf.Warna3 == null)
+            {
+                Warna3El.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                String strColour = gf.Warna3;
+                Color myColour = ConvertHexStringToColour(strColour);
+                Warna3El.Fill = new SolidColorBrush(myColour);
+            }
+            if (gf.Warna4 == null)
+            {
+                Warna4El.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                String strColour = gf.Warna4;
+                Color myColour = ConvertHexStringToColour(strColour);
+                Warna4El.Fill = new SolidColorBrush(myColour);
+            }
+        }
         public void SetPikselCitra(int x, int y, byte alpha, int r, int g, int b)
         {
             float ai = alpha * PreMultiplyFactor;

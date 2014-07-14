@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ngebatik.Kelas
 {
-    class getsoal
+    public class getsoal
     {
         public string idSoal { get; set; }
         public string Pertanyaan { get; set; }

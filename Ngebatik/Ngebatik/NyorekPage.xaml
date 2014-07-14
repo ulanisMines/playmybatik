@@ -49,7 +49,25 @@
         	</Canvas.RenderTransform>
         </Canvas>
         <Grid HorizontalAlignment="Left" Height="92" Margin="0,388,0,0" VerticalAlignment="Top" Width="800" Background="#FFD34A16">
-            <Image HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="78" Source="/Asset/0190871_l.jpg"  Margin="184,11,0,0" Tap="Image_Tap_1"/>
+            <StackPanel Orientation="Horizontal" Margin="50,11,0,0">
+                <Grid Width="74" Margin="0,2,0,-2">
+
+                    
+                    <Ellipse x:Name="Warna1El" Stroke="Black" Width="74" Margin="0,0,0,10"/>
+                </Grid>
+                <Grid>
+                    <Ellipse x:Name="Warna2El" Stroke="Black" Width="74" Margin="0,0,0,10"/>
+                </Grid>
+                <Grid>
+                    <Ellipse x:Name="Warna3El" Stroke="Black" Width="74" Margin="0,0,0,10"/>
+                    
+                </Grid>
+                <Grid>
+                    <Ellipse x:Name="Warna4El" Stroke="Black" Width="74" Margin="0,0,0,10"/>
+        
+                </Grid>
+
+            </StackPanel>
             <TextBlock x:Name="waktuBasahKuasText" Text="0" HorizontalAlignment="Right" Margin="0,-379,758,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF494949" FontSize="36"/>
             <Button x:Name="btnselesai" Content="Selesai" HorizontalAlignment="Left" Margin="566,11,0,0" VerticalAlignment="Top" Width="204" Click="Button_Click_1"/>
         </Grid>

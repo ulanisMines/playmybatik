@@ -19,10 +19,10 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="/Asset/in game screen larger.png"/>
         </Grid.Background>
-        <StackPanel Height="480" Width="800">
-            <TextBlock Text="{Binding Pertanyaan}" TextWrapping="Wrap" FontFamily="/Asset/Fonts/Museo300-Regular.otf#Museo 300" FontSize="35" TextAlignment="Center" Margin="64,95,66,346" Foreground="Black"/>
-            <Image Tag="{Binding OpsiB}"  Source="{Binding OpsiB}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="450,-350,130,0" Tap="Opsi_A" Width="178" Height="162" Stretch="UniformToFill" />
-            <Image Tag="{Binding OpsiA}" Source="{Binding OpsiA}"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-280,-350,0,0" Width="178" Height="162" Stretch="UniformToFill" Tap="Opsi_A"/>
+        <StackPanel x:Name="BindingSoalBatik" Height="480" Width="800">
+            <TextBlock x:Name="BindingPertanyaan" Text="{Binding Pertanyaan}" TextWrapping="Wrap" FontFamily="/Asset/Fonts/Museo300-Regular.otf#Museo 300" FontSize="35" TextAlignment="Center" Margin="64,95,66,346" Foreground="Black"/>
+            <Image x:Name="BindingOpsiB" Tag="{Binding OpsiB}"  Source="{Binding OpsiB}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="450,-350,130,0" Tap="BindingOpsiBOnClick" Width="178" Height="162" Stretch="UniformToFill" />
+            <Image x:Name="BindingOpsiA" Tag="{Binding OpsiA}" Source="{Binding OpsiA}"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="171,-350,451,0" Width="178" Height="162" Stretch="UniformToFill" Tap="BindingOpsiAOnClick"/>
         </StackPanel>
     </Grid>
 

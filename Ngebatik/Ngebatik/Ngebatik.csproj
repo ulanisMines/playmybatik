@@ -99,6 +99,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Drawing.cs" />
     <Compile Include="FinishNgelowong.xaml.cs">
       <DependentUpon>FinishNgelowong.xaml</DependentUpon>
     </Compile>
@@ -215,27 +216,13 @@
     <Content Include="Asset\Fonts\Museo300-Regular.otf" />
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
-    <None Include="UML Sequence Diagram\DelegateCommand_DelegateCommand.sequencediagram" />
-    <None Include="UML Sequence Diagram\getFilosofiViewModel_getFilosofiViewModel.sequencediagram" />
-    <None Include="UML Sequence Diagram\getFilosofiViewModel_getFilosofiViewModel_1.sequencediagram" />
-    <None Include="UML Sequence Diagram\getsoalViewModel_DownloadSoalBatik.sequencediagram" />
+    <None Include="MainPage_MainPage.sequencediagram" />
     <Content Include="Asset\in game screen larger.png" />
     <Content Include="Asset\new logos.png" />
     <Content Include="Properties\AppManifest.xml" />
-    <None Include="UML Sequence Diagram\getsoalViewModel_getsoalViewModel.sequencediagram" />
-    <None Include="UML Sequence Diagram\MainPage_Button_Click_2.sequencediagram" />
-    <None Include="UML Sequence Diagram\MainPage_MainNgebatik.sequencediagram" />
-    <None Include="UML Sequence Diagram\NyorekPage_NyorekPage.sequencediagram" />
-    <None Include="UML Sequence Diagram\PageNyorek_GenerateSoalBatik.sequencediagram" />
-    <None Include="UML Sequence Diagram\PageRandomSoal_PageRandomSoal.sequencediagram" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
-    <None Include="UML Sequence Diagram\SetLevel_Button_Click_1.sequencediagram" />
-    <None Include="UML Sequence Diagram\SetLevel_SetLevel.sequencediagram" />
-    <None Include="UML Sequence Diagram\Sobel_CitraSobel.sequencediagram" />
-    <None Include="UML Sequence Diagram\Sobel_SetPikselCitra.sequencediagram" />
-    <None Include="UML Sequence Diagram\ViewBelajar_ViewBelajar.sequencediagram" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
@@ -285,50 +272,8 @@
     <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UML Sequence Diagram\DelegateCommand_DelegateCommand.sequencediagram.layout">
-      <DependentUpon>DelegateCommand_DelegateCommand.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\getFilosofiViewModel_getFilosofiViewModel.sequencediagram.layout">
-      <DependentUpon>getFilosofiViewModel_getFilosofiViewModel.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\getFilosofiViewModel_getFilosofiViewModel_1.sequencediagram.layout">
-      <DependentUpon>getFilosofiViewModel_getFilosofiViewModel_1.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\getsoalViewModel_DownloadSoalBatik.sequencediagram.layout">
-      <DependentUpon>getsoalViewModel_DownloadSoalBatik.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\getsoalViewModel_getsoalViewModel.sequencediagram.layout">
-      <DependentUpon>getsoalViewModel_getsoalViewModel.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\MainPage_Button_Click_2.sequencediagram.layout">
-      <DependentUpon>MainPage_Button_Click_2.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\MainPage_MainNgebatik.sequencediagram.layout">
-      <DependentUpon>MainPage_MainNgebatik.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\NyorekPage_NyorekPage.sequencediagram.layout">
-      <DependentUpon>NyorekPage_NyorekPage.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\PageNyorek_GenerateSoalBatik.sequencediagram.layout">
-      <DependentUpon>PageNyorek_GenerateSoalBatik.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\PageRandomSoal_PageRandomSoal.sequencediagram.layout">
-      <DependentUpon>PageRandomSoal_PageRandomSoal.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\SetLevel_Button_Click_1.sequencediagram.layout">
-      <DependentUpon>SetLevel_Button_Click_1.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\SetLevel_SetLevel.sequencediagram.layout">
-      <DependentUpon>SetLevel_SetLevel.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\Sobel_CitraSobel.sequencediagram.layout">
-      <DependentUpon>Sobel_CitraSobel.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\Sobel_SetPikselCitra.sequencediagram.layout">
-      <DependentUpon>Sobel_SetPikselCitra.sequencediagram</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UML Sequence Diagram\ViewBelajar_ViewBelajar.sequencediagram.layout">
-      <DependentUpon>ViewBelajar_ViewBelajar.sequencediagram</DependentUpon>
+    <EmbeddedResource Include="MainPage_MainPage.sequencediagram.layout">
+      <DependentUpon>MainPage_MainPage.sequencediagram</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

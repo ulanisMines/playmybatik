@@ -33,7 +33,7 @@
             </Button.Background>
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="248,42,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Menu Belajar Batik" FontSize="65" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink" Foreground="Black" VerticalAlignment="Top"/>
-        <Button x:Name="FilosofiBatik" Content="Filosofi Batik" HorizontalAlignment="Left" Margin="421,192,0,0" Grid.Row="1" VerticalAlignment="Top" Height="102" Width="230" BorderThickness="0" FontFamily="Asset/Fonts/Muswo300-Regular.otf#Museo 300" Foreground="Black" Click="FilosofiBatik_Click">
+        <Button x:Name="ButtonFilosofiBatik" Content="Filosofi Batik" HorizontalAlignment="Left" Margin="421,192,0,0" Grid.Row="1" VerticalAlignment="Top" Height="102" Width="230" BorderThickness="0" FontFamily="Asset/Fonts/Muswo300-Regular.otf#Museo 300" Foreground="Black" Click="FilosofiBatik_Click">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="/Asset/button/buttongy.png"/>
             </Button.Background>

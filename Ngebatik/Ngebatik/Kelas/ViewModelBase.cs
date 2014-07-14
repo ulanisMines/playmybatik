@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PlayMyBatik.Common
 {
-    class ViewModelBase : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected void RaisePropertyChanged(string value)

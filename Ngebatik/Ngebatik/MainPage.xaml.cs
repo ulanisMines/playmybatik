@@ -25,10 +25,7 @@ namespace Ngebatik
             Idle.Begin();
         }
 
-        private void MainNgebatik(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/SetLevel.xaml", UriKind.Relative));
-        }
+       
 
        
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -56,6 +53,13 @@ namespace Ngebatik
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/ViewInfo.xaml", UriKind.Relative));
+        }
+
+        
+
+        private void ButtonPlayOnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/SetLevel.xaml", UriKind.Relative));
         }
     }
 }

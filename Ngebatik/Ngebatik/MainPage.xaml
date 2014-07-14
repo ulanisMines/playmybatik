@@ -147,7 +147,7 @@
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/Asset/main screen2.jpg"/>
         </Grid.Background>
-        <Button Content="" HorizontalAlignment="Center" Margin="276,242,297,0" VerticalAlignment="Top" Click="MainNgebatik" Height="115" Width="227" BorderThickness="0" Style="{StaticResource Bulet}">
+        <Button x:Name="ButtonPlay" Content="" HorizontalAlignment="Center" Margin="276,242,297,0" VerticalAlignment="Top" Click="ButtonPlayOnClick" Height="115" Width="227" BorderThickness="0" Style="{StaticResource Bulet}">
             <Button.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/Asset/button/button-play.png"/>
             </Button.Background>
