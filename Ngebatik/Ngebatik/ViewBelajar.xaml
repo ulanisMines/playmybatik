@@ -15,7 +15,7 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <StackPanel HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="800" >
+        <StackPanel HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="800" Margin="0,-10,0,0" >
             <StackPanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="/Asset/in game screen larger.png"/>
             </StackPanel.Background>
@@ -29,49 +29,51 @@
                 <Grid Grid.Row="0">
                     <TextBlock Text="Belajar Filosofi Batik" Margin="0,40,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" FontFamily="/Asset/Fonts/elegant_ink.ttf#Elegant Ink" Foreground="#FF1B141E"/>
                 </Grid>
-                <Grid Grid.Row="1">
-                    <phone:Pivot HorizontalAlignment="Center" Height="230" VerticalAlignment="Top" Width="638" Margin="77,20,85,0">
+                <Grid Margin="80,103,80,10" Grid.RowSpan="2">
 
-                        <phone:PivotItem Margin="0">
-                            
-                            <StackPanel Height="211" Orientation="Vertical">
-                                    <ListBox x:Name="BindingFilosofiBatik" ItemsSource="{Binding GetFilosofiCollection}">
-                                        <ListBox.ItemTemplate>
-                                        <DataTemplate>
-                                        <Grid Height="209">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="320"/>
-                                                <ColumnDefinition Width="320"/>
-                                            </Grid.ColumnDefinitions>
-                                            <Grid Grid.Column="0" Margin="0,0,0,0">
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="*"/>
-                                                    <RowDefinition Height="auto"/>
-                                                </Grid.RowDefinitions>
-                                                <Grid Grid.Row="0">
-                                                    <Image x:Name="BindingGambarBatik" Source="{Binding GambarBatik}" OpacityMask="Black" Stretch="UniformToFill" />
-                                                </Grid>
-                                            </Grid>
-                                            <Grid Grid.Column="1" Margin="20,0,0,0">
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="auto"/>
-                                                    <RowDefinition Height="auto"/>
-                                                </Grid.RowDefinitions>
-                                                <Grid Grid.Row="0">
-                                                    <TextBlock x:Name="BindingNamaBatik" Text="{Binding NamaBatik}" TextWrapping="Wrap"></TextBlock>
-                                                </Grid>
-                                                <Grid Grid.Row="1">
-                                                        <TextBlock x:Name="BindingFilosofi" Text="{Binding Filosofi}" TextWrapping="Wrap"></TextBlock>
-                                                </Grid>
+                    <TextBlock x:Name="TextLoading" Text="Loading .." Margin="0,40,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" FontFamily="/Asset/Fonts/elegant_ink.ttf#Elegant Ink" Foreground="#FF1B141E" Visibility="Visible"/>
+
+
+                    <StackPanel Height="211" Orientation="Vertical">
+                        <!--<ListBox x:Name="BindingFilosofiBatik" Width="640" ItemsSource="{Binding GetFilosofiCollection}" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionChanged="BindingFilosofiBatik_SelectionChanged" >
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal">
+
+                                    </StackPanel>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>-->
+                                    <Grid Height="209">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="320"/>
+                                            <ColumnDefinition Width="320"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" Margin="0,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Image x:Name="BindingGambarBatik" Source="{Binding GambarBatik}" OpacityMask="Black" Stretch="UniformToFill" />
                                             </Grid>
                                         </Grid>
-                                    </DataTemplate>
-                                    </ListBox.ItemTemplate>
-                                </ListBox>
-                            </StackPanel>
-                        </phone:PivotItem>
+                                        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Visible">
+                                            <StackPanel Margin="20,0,0,0">
+                                                <TextBlock x:Name="BindingNamaBatik" Text="{Binding NamaBatik}" TextWrapping="Wrap" FontWeight="Bold"></TextBlock>
+                                                <TextBlock x:Name="BindingFilosofi" Text="{Binding Filosofi}" TextWrapping="Wrap"></TextBlock>
+                                    
+                                </StackPanel>
+                                        </ScrollViewer>
+                                    </Grid>
+                                <!--</DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>-->
+                    </StackPanel>
 
-                        <!--<phone:PivotItem Margin="-303,-11,-309,-9">
+
+                    <!--<phone:PivotItem Margin="-303,-11,-309,-9">
                             <StackPanel Height="211">
                                 <ListBox ItemsSource="{Binding GetFilosofiCollection2}">
                                     <ListBox.ItemTemplate>
@@ -109,8 +111,6 @@
                             </StackPanel>
                         </phone:PivotItem>-->
 
-                    </phone:Pivot>
-
 
                 </Grid>
 
@@ -125,7 +125,7 @@
                     <Grid Grid.Column="0">
 
                     </Grid>
-                    <Grid Grid.Column="1" Margin="0,10,0,10" RenderTransformOrigin="0.5,0.5">
+                    <Grid x:Name="TapBack" Grid.Column="1" Margin="0,10,0,10" RenderTransformOrigin="0.5,0.5" Tap="Grid_Tap_Back">
                         <Grid.RenderTransform>
                             <CompositeTransform Rotation="180"/>
                         </Grid.RenderTransform>
@@ -134,7 +134,7 @@
                         </Grid.Background>
 
                     </Grid>
-                    <Grid Grid.Column="2" Margin="0,10,0,10">
+                    <Grid x:Name="TapNext" Grid.Column="2" Margin="0,10,0,10" Tap="Grid_Tap_Next">
                         <Grid.Background>
                             <ImageBrush Stretch="Uniform" ImageSource="/Asset/button/button-play.png"/>
                         </Grid.Background>

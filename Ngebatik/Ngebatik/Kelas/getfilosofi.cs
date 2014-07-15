@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ngebatik.Kelas
 {
-    class getfilosofi
+    public class getfilosofi
     {
         public string idBatik { get; set; }
         public string NamaBatik { get; set; }

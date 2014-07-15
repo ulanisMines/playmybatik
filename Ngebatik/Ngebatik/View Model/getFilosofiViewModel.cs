@@ -12,7 +12,7 @@ using System.Windows;
 
 namespace Ngebatik.View_Model
 {
-    class getFilosofiViewModel : ViewModelBase
+     public class getFilosofiViewModel : ViewModelBase
     {
         private ObservableCollection<getfilosofi> getFilosofiCollection = new ObservableCollection<getfilosofi>();
 
@@ -20,7 +20,7 @@ namespace Ngebatik.View_Model
         {
             get { return getFilosofiCollection; }
             set { getFilosofiCollection = value;
-            RaisePropertyChanged("");
+            RaisePropertyChanged("GetFilosofiCollection");
             }
 
         }
@@ -44,6 +44,9 @@ namespace Ngebatik.View_Model
         {
             JObject jRoot = JObject.Parse(e.Result);
             JArray jItem = JArray.Parse(jRoot.SelectToken("result").ToString());
+
+            var data = new ObservableCollection<getfilosofi>();
+
             foreach (JObject item in jItem)
             {
                 getfilosofi gf = new getfilosofi();
@@ -57,8 +60,10 @@ namespace Ngebatik.View_Model
                 gf.Warna2 = item.SelectToken("Warna2").ToString();
                 gf.Warna3 = item.SelectToken("Warna3").ToString();
                 gf.Warna4 = item.SelectToken("Warna4").ToString();
-                GetFilosofiCollection.Add(gf);
+                data.Add(gf);
             }
+
+            GetFilosofiCollection = data;
         }
 
        /* public void LoadUrlItem2()

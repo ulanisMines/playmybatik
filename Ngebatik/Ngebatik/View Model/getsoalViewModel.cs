@@ -16,16 +16,17 @@ namespace Ngebatik.View_Model
 {
     public class getsoalViewModel : ViewModelBase
     {
-        private ObservableCollection<getsoal> getSoalCollection  = new ObservableCollection<getsoal>();
+        private ObservableCollection<getsoal> getSoalCollection = new ObservableCollection<getsoal>();
         private String opsiA;
         private String opsiB;
         private String pertanyaan;
+        private string jawaban;
 
         public String Pertanyaan
         {
             get { return pertanyaan; }
-            set 
-            { 
+            set
+            {
                 pertanyaan = value;
                 RaisePropertyChanged("");
             }
@@ -34,8 +35,8 @@ namespace Ngebatik.View_Model
         public String OpsiB
         {
             get { return opsiB; }
-            set 
-            { 
+            set
+            {
                 opsiB = value;
                 RaisePropertyChanged("");
             }
@@ -45,32 +46,45 @@ namespace Ngebatik.View_Model
         public String OpsiA
         {
             get { return opsiA; }
-            set 
-            { 
+            set
+            {
                 opsiA = value;
                 RaisePropertyChanged("");
             }
         }
 
-    public ObservableCollection<getsoal> GetSoalCollection
-    {
-        get { return getSoalCollection; }
-      set { getSoalCollection = value;
-      RaisePropertyChanged("");
-      }
-    }
+        public String Jawaban
+        {
+            get { return jawaban; }
+            set
+            {
+                jawaban = value;
+                RaisePropertyChanged("Jawaban");
+            }
+        }
 
-         public getsoalViewModel()
+        public ObservableCollection<getsoal> GetSoalCollection
+        {
+            get { return getSoalCollection; }
+            set
+            {
+                getSoalCollection = value;
+                RaisePropertyChanged("");
+            }
+        }
+
+        
+
+        public getsoalViewModel()
         {
             LoadURL();
         }
 
         public void LoadURL()
         {
-            
             WebClient wcSoalBatik = new WebClient();
             wcSoalBatik.DownloadStringCompleted += new DownloadStringCompletedEventHandler(DownloadSoalBatik);
-            wcSoalBatik.DownloadStringAsync(new Uri(Helper.BASE + "getsoal.php?Level="+Helper.Level));
+            wcSoalBatik.DownloadStringAsync(new Uri(Helper.BASE + "getsoal.php?Level=" + Helper.Level));
         }
 
         private void DownloadSoalBatik(object sender, DownloadStringCompletedEventArgs e)
@@ -89,7 +103,6 @@ namespace Ngebatik.View_Model
 
                 GetSoalCollection.Add(gs);
             }
-
         }
         #region soal
 
@@ -119,7 +132,7 @@ namespace Ngebatik.View_Model
 
         private void SetSoalId(object obj)
         {
-             getsoal selectedItemData = obj as getsoal;
+            getsoal selectedItemData = obj as getsoal;
 
             if (selectedItemData != null)
                 Navigation.Id = selectedItemData.idSoal;
