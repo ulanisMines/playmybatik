@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bb54b5f0-a266-49cc-812f-22e4ba291e4e"
+  name="Controls"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e17860ed-8676-41e5-856b-b941b8bf892f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMicrosoft.Phone.Controls"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7c8476a0-93e4-4824-8946-611966fc035f"
+        name="PhoneApplicationPage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c96bd0ed-f7e5-45e0-bcd3-d599aa91ea8d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2FMicrosoft.Phone.dll&quot; Namespace%3DMicrosoft.Phone.Controls Type%3DPhoneApplicationPage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a3d363ab-5b9b-4566-82d2-cb63ecad69ab"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d71bb1b1-912a-468e-a39d-b3a93ec5a0a6">
+                <propertyInstance
+                  Id="b6949abd-1323-42ae-9605-bf59eb18fed8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="19e47337-abde-440d-ae0e-bdec1b84f082">
+                <propertyInstance
+                  Id="cc62cafb-5e65-4325-9fa5-aec81571410c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e898963-f100-4390-9fd9-56b65e15cc6e">
+                <propertyInstance
+                  Id="7a90d363-7215-4607-bfb3-a37db810c3a5"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b49f6d18-f0dc-4db3-8b2b-916e71262fbc">
+                <propertyInstance
+                  Id="07f4cff2-0a7f-45ca-bbfb-6f4494ee6cc9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1bd29a0a-7fd6-4259-9548-e6eb4b3ecc4a">
+                <propertyInstance
+                  Id="0c7ed171-b5dc-44aa-afbd-9ebdb809bee5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b854fd7b-0ab2-40ad-a1a1-fc707f7cd4bb"
+        name="GestureEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2dc80173-1f50-4659-8dc8-37230d32aac8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FUnikomAppWP%2Fpackages%2FWPtoolkit.4.2013.08.16%2Flib%2Fwp8%2FMicrosoft.Phone.Controls.Toolkit.dll Namespace%3DMicrosoft.Phone.Controls Type%3DGestureEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8ef93ffa-a707-44ad-8897-2b39cf64e710"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0aa1428d-2915-464f-a31a-664f0b586b8e">
+                <propertyInstance
+                  Id="6077cefa-5893-4f70-8c90-c275bab05f48"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f6e2aa82-ef36-4bdb-97b1-6de68413391e">
+                <propertyInstance
+                  Id="a2ce96d8-5ad3-4624-a83c-dbec102ba3e1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="39ae4fa4-6539-4231-8bc0-e1f70404d135">
+                <propertyInstance
+                  Id="b60132b9-fe62-40be-a028-39905b442e03"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="afdaf45d-b364-4eb4-94ca-20cc207e0c86">
+                <propertyInstance
+                  Id="63fd9577-b98b-4f9c-90bb-12465e428275"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ccdaa693-d0dd-484f-9331-71ee68cff997">
+                <propertyInstance
+                  Id="ff09a284-e515-491c-9aa8-7899976dcf76"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="d2a9bedd-edd3-416b-827e-f6d275645706"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5b6cf866-3764-4dec-b5b7-e96ef871c2ad"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package1_0824.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="77746ae5-8886-4ef3-b0fc-fdd8c8257500"
+        name="PhoneApplicationFrame"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d1e464f5-d29e-40ae-aa84-f1682d3d303a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2FMicrosoft.Phone.dll&quot; Namespace%3DMicrosoft.Phone.Controls Type%3DPhoneApplicationFrame"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c0acdcb8-65b8-404b-98b4-83fadced2a46"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="748b220c-14f9-47c8-847e-b8516e20f77e">
+                <propertyInstance
+                  Id="a4d11ad7-d45d-41ae-8113-b2dc115d7f95"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d537e074-b745-403f-a722-0c48e0012c19">
+                <propertyInstance
+                  Id="7dd941d2-50ec-42ca-b6cc-be29ab1e4029"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4538aff2-6344-407f-b6da-7b3ea480ee68">
+                <propertyInstance
+                  Id="0f6cfc75-0ca7-4b89-87e2-4c5515868c34"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="986c9ed8-84df-457f-a3ca-56f9219dee19">
+                <propertyInstance
+                  Id="1f4bfb9f-d1d9-47be-a445-ec4c9830ec6d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d464913-e28b-4b50-8b46-1a748c504a27">
+                <propertyInstance
+                  Id="27cedfd9-24b2-452c-adcb-6720839cac2c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

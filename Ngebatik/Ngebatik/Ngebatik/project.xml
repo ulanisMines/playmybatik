@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project commentTableSortAscending="false" commentTableSortColumn="Date Time" documentationType="html" exportedFromDifferentName="false" exporterVersion="7.0.0" name="untitled" textualAnalysisHighlightCaseSensitive="false" umlVersion="2.x">
+	<ProjectInfo>
+		<LogicalView/>
+	</ProjectInfo>
+	<Models>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="GeneratedReqIDs" id="eRj_jmKGAqACBBG5" modelType="GeneratedReqIDs" name="GeneratedReqIDs">
+			<ModelProperties>
+				<StringProperty displayName="Name" name="name" value="GeneratedReqIDs"/>
+				<StringProperty displayName="Model Type" name="modelType" value="GeneratedReqIDs"/>
+				<ModelsProperty displayName="Req IDs" name="reqIDs"/>
+				<IntegerProperty displayName="Last Numeric Value" name="lastNumericValue" value="0"/>
+				<StringProperty displayName="Req IDPrefix" name="_reqIDPrefix" value=""/>
+				<StringProperty displayName="Req IDSuffix" name="_reqIDSuffix" value=""/>
+				<IntegerProperty displayName="Req IDNum Of Digits" name="_reqIDNumOfDigits" value="-1"/>
+			</ModelProperties>
+		</Model>
+	</Models>
+	<Diagrams>
+		<Diagram connectorStyle="Oblique" diagramType="UseCaseDiagram" displayDiagramType="Use Case Diagram" documentation="" id="xy0_jmKGAqACBBGi" imageFileName="Use Case Diagram1.png" imageHeight="4" imageScale="1.0" imageWidth="4" name="Use Case Diagram1" rtfDocumentation="" trimmedHeight="0" trimmedWidth="0">
+			<DiagramProperties>
+				<StringProperty displayName="Reference Container Id" name="referenceContainerId"/>
+				<StringProperty displayName="Pm Status Id" name="pmStatusId"/>
+				<StringProperty displayName="Pm Difficulty Id" name="pmDifficultyId"/>
+				<StringProperty displayName="Pm Discipline Id" name="pmDisciplineId"/>
+				<StringProperty displayName="Pm Priority Id" name="pmPriorityId"/>
+				<StringProperty displayName="Pm Version Id" name="pmVersionId"/>
+				<StringProperty displayName="Pm Iteration Id" name="pmIterationId"/>
+				<StringProperty displayName="Pm Phase Id" name="pmPhaseId"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="Wulan Fitriani"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1402071724685"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1402071886180"/>
+				<IntegerProperty displayName="Show Package Name Style" name="showPackageNameStyle" value="0"/>
+				<IntegerProperty displayName="Show Connector Name" name="showConnectorName" value="0"/>
+				<IntegerProperty displayName="Paint Connector Through Label" name="paintConnectorThroughLabel" value="0"/>
+				<StringProperty displayName="Transit From" name="transitFrom"/>
+				<StringProperty displayName="Transit To" name="transitTo"/>
+				<IntegerProperty displayName="Show Activity State Node Caption" name="showActivityStateNodeCaption" value="0"/>
+				<StringProperty displayName="Documentation" name="documentation"/>
+				<BooleanProperty displayName="Editable" name="editable" value="true"/>
+				<StringProperty displayName="Request Layout Type" name="requestLayoutType"/>
+				<BooleanProperty displayName="Follow Diagram Parent Element" name="followDiagramParentElement" value="true"/>
+				<BooleanProperty displayName="Auto Fit Shapes Size" name="autoFitShapesSize" value="false"/>
+				<BooleanProperty displayName="Show Tagged Values" name="showTaggedValues" value="false"/>
+				<BooleanProperty displayName="Show Stereotypes" name="showStereotypes" value="true"/>
+				<BooleanProperty displayName="Show Constraints" name="showConstraints" value="false"/>
+				<BooleanProperty displayName="Align To Grid" name="alignToGrid" value="true"/>
+				<IntegerProperty displayName="Grid Width" name="gridWidth" value="10"/>
+				<IntegerProperty displayName="Grid Height" name="gridHeight" value="10"/>
+				<ColorProperty displayName="Grid Color" name="gridColor" value="Cr:192,192,192,255"/>
+				<ColorProperty displayName="Diagram Background" name="diagramBackground" value="Cr:255,255,255,255"/>
+				<IntegerProperty displayName="Connector Style" name="connectorStyle" value="1"/>
+				<IntegerProperty displayName="Connector Line Jumps" name="connectorLineJumps" value="0"/>
+				<IntegerProperty displayName="Connector Line Jumps Size" name="connectorLineJumpsSize" value="0"/>
+				<IntegerProperty displayName="Connection Point Style" name="connectionPointStyle" value="0"/>
+				<IntegerProperty displayName="Connector Label Orientation" name="connectorLabelOrientation" value="0"/>
+				<IntegerProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="4"/>
+				<DoubleProperty displayName="Zoom Ratio" name="zoomRatio" value="1.0"/>
+				<IntegerProperty displayName="X" name="x" value="0"/>
+				<IntegerProperty displayName="Y" name="y" value="0"/>
+				<IntegerProperty displayName="Width" name="width" value="1153"/>
+				<IntegerProperty displayName="Height" name="height" value="615"/>
+				<ModelRefProperty displayName="Parent Model" name="parentModel"/>
+				<BooleanProperty displayName="Global Palette Option" name="_globalPaletteOption" value="true"/>
+				<BooleanProperty displayName="Always Show Reference And Subdiagram Resource" name="_alwaysShowReferenceAndSubdiagramResource" value="false"/>
+				<BooleanProperty displayName="Initialize Diagram For Create" name="initializeDiagramForCreate" value="true"/>
+				<BooleanProperty displayName="Request Validate Snap To Grid" name="requestValidateSnapToGrid" value="false"/>
+				<BooleanProperty displayName="Show Default Package" name="showDefaultPackage" value="false"/>
+				<ModelRefProperty displayName="Default Package" name="defaultPackage"/>
+				<BooleanProperty displayName="Show Use Case Extension Point" name="showUseCaseExtensionPoint" value="true"/>
+				<BooleanProperty displayName="Show Use Case Id" name="showUseCaseId" value="false"/>
+				<IntegerProperty displayName="Use Case Display Option" name="useCaseDisplayOption" value="0"/>
+				<IntegerProperty displayName="Actor Display Option" name="_actorDisplayOption" value="0"/>
+			</DiagramProperties>
+		</Diagram>
+		<Diagram connectorStyle="Oblique" diagramType="ClassDiagram" displayDiagramType="Class Diagram" documentation="" id="L3b_jmKGAqACBBG6" imageFileName="Class Diagram1.png" imageHeight="4" imageScale="1.0" imageWidth="4" name="Class Diagram1" rtfDocumentation="" trimmedHeight="0" trimmedWidth="0">
+			<DiagramProperties>
+				<StringProperty displayName="Reference Container Id" name="referenceContainerId"/>
+				<StringProperty displayName="Pm Status Id" name="pmStatusId"/>
+				<StringProperty displayName="Pm Difficulty Id" name="pmDifficultyId"/>
+				<StringProperty displayName="Pm Discipline Id" name="pmDisciplineId"/>
+				<StringProperty displayName="Pm Priority Id" name="pmPriorityId"/>
+				<StringProperty displayName="Pm Version Id" name="pmVersionId"/>
+				<StringProperty displayName="Pm Iteration Id" name="pmIterationId"/>
+				<StringProperty displayName="Pm Phase Id" name="pmPhaseId"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="Wulan Fitriani"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1402071903988"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1402071927347"/>
+				<IntegerProperty displayName="Show Package Name Style" name="showPackageNameStyle" value="0"/>
+				<IntegerProperty displayName="Show Connector Name" name="showConnectorName" value="0"/>
+				<IntegerProperty displayName="Paint Connector Through Label" name="paintConnectorThroughLabel" value="0"/>
+				<StringProperty displayName="Transit From" name="transitFrom"/>
+				<StringProperty displayName="Transit To" name="transitTo"/>
+				<IntegerProperty displayName="Show Activity State Node Caption" name="showActivityStateNodeCaption" value="0"/>
+				<StringProperty displayName="Documentation" name="documentation"/>
+				<BooleanProperty displayName="Editable" name="editable" value="true"/>
+				<StringProperty displayName="Request Layout Type" name="requestLayoutType"/>
+				<BooleanProperty displayName="Follow Diagram Parent Element" name="followDiagramParentElement" value="true"/>
+				<BooleanProperty displayName="Auto Fit Shapes Size" name="autoFitShapesSize" value="false"/>
+				<BooleanProperty displayName="Show Tagged Values" name="showTaggedValues" value="false"/>
+				<BooleanProperty displayName="Show Stereotypes" name="showStereotypes" value="true"/>
+				<BooleanProperty displayName="Show Constraints" name="showConstraints" value="false"/>
+				<BooleanProperty displayName="Align To Grid" name="alignToGrid" value="true"/>
+				<IntegerProperty displayName="Grid Width" name="gridWidth" value="10"/>
+				<IntegerProperty displayName="Grid Height" name="gridHeight" value="10"/>
+				<ColorProperty displayName="Grid Color" name="gridColor" value="Cr:192,192,192,255"/>
+				<ColorProperty displayName="Diagram Background" name="diagramBackground" value="Cr:255,255,255,255"/>
+				<IntegerProperty displayName="Connector Style" name="connectorStyle" value="1"/>
+				<IntegerProperty displayName="Connector Line Jumps" name="connectorLineJumps" value="0"/>
+				<IntegerProperty displayName="Connector Line Jumps Size" name="connectorLineJumpsSize" value="0"/>
+				<IntegerProperty displayName="Connection Point Style" name="connectionPointStyle" value="0"/>
+				<IntegerProperty displayName="Connector Label Orientation" name="connectorLabelOrientation" value="0"/>
+				<IntegerProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="4"/>
+				<DoubleProperty displayName="Zoom Ratio" name="zoomRatio" value="1.0"/>
+				<IntegerProperty displayName="X" name="x" value="0"/>
+				<IntegerProperty displayName="Y" name="y" value="0"/>
+				<IntegerProperty displayName="Width" name="width" value="1153"/>
+				<IntegerProperty displayName="Height" name="height" value="615"/>
+				<ModelRefProperty displayName="Parent Model" name="parentModel"/>
+				<BooleanProperty displayName="Global Palette Option" name="_globalPaletteOption" value="true"/>
+				<BooleanProperty displayName="Always Show Reference And Subdiagram Resource" name="_alwaysShowReferenceAndSubdiagramResource" value="false"/>
+				<BooleanProperty displayName="Initialize Diagram For Create" name="initializeDiagramForCreate" value="true"/>
+				<BooleanProperty displayName="Request Validate Snap To Grid" name="requestValidateSnapToGrid" value="false"/>
+				<BooleanProperty displayName="Show Default Package" name="showDefaultPackage" value="true"/>
+				<ModelRefProperty displayName="Default Package" name="defaultPackage"/>
+				<BooleanProperty displayName="Show Attribute Getter Setter" name="showAttributeGetterSetter" value="false"/>
+				<IntegerProperty displayName="Show Class Owner" name="showClassOwner" value="2"/>
+				<IntegerProperty displayName="Show Package Owner" name="showPackageOwner" value="2"/>
+				<BooleanProperty displayName="Show Template Info Of Generalization And Realization" name="showTemplateInfoOfGeneralizationAndRealization" value="false"/>
+				<BooleanProperty displayName="Suppress Implied1 Multiplicity For Attribute And Association End" name="suppressImplied1MultiplicityForAttributeAndAssociationEnd" value="false"/>
+				<IntegerProperty displayName="Show Class Empty Compartments" name="showClassEmptyCompartments" value="2"/>
+				<IntegerProperty displayName="Show Attributes Code Details" name="showAttributesCodeDetails" value="2"/>
+				<IntegerProperty displayName="Show Attributes Type" name="showAttributesType" value="1"/>
+				<IntegerProperty displayName="Show Operations Parameters" name="showOperationsParameters" value="1"/>
+				<IntegerProperty displayName="Show Operations Return Type" name="showOperationsReturnType" value="1"/>
+				<IntegerProperty displayName="Show Operations Code Details" name="showOperationsCodeDetails" value="2"/>
+				<IntegerProperty displayName="Show Parameters Code Details" name="showParametersCodeDetails" value="2"/>
+				<IntegerProperty displayName="Show Ellipsis For Unshown Class Members" name="showEllipsisForUnshownClassMembers" value="2"/>
+				<IntegerProperty displayName="Generalization Set Notation" name="generalizationSetNotation" value="2"/>
+			</DiagramProperties>
+		</Diagram>
+	</Diagrams>
+</Project>

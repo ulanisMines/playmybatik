@@ -1,0 +1,1017 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="aaa6bc08-e583-4f27-b864-a0167b8da5c3"
+  name="Common"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="75b45f6c-f672-4132-93d1-f3e0f38ad15d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPlayMyBatik.Common"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3d1a26a1-0241-41bf-8389-ee9e20b23d0d"
+        name="ViewModelBase"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1dbcb7c6-8edc-4f66-9d31-634399f5207f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DViewModelBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1bafd7ee-21db-429c-86d1-f22c41bda9cf"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="664ad720-0bd1-4cdc-b349-82d3ec64fbb7">
+                <propertyInstance
+                  Id="da4c41a9-9fa2-4dab-a3b4-9150feeb00dc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="727b0385-5518-45e7-ac1d-3b76d3def669">
+                <propertyInstance
+                  Id="9b028bcd-7405-46cd-8960-9d6e989644a0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d4a30781-85c7-41cb-ac3d-2020a453cac3">
+                <propertyInstance
+                  Id="a127a625-d75a-4e52-a29c-c81ab20db5a9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b54e719-4c2d-46f3-9071-07606f5d9834">
+                <propertyInstance
+                  Id="f77013c8-1d62-4c1e-ac78-ad840405c4e4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8debe2ff-cedd-44d0-ac15-7ea93d5614b8">
+                <propertyInstance
+                  Id="b48d7ca4-d335-46ae-9d29-209e2d7cab81"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="54f6f472-cfda-4d73-89c1-85b3afbf4d7b">
+            <interfaceMoniker
+              Id="780c3ed4-420d-444d-a449-186ca194b2f7"
+              LastKnownName="INotifyPropertyChanged"
+              LastKnownLocation="Package2_0456.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="42894229-dc91-4f6e-b093-66e4fc4da8c2"
+            name="PropertyChanged"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="adade860-a642-4cf8-a984-e419c43d10a4"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DViewModelBase Member%3DPropertyChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5576593d-60dd-4b7a-904e-d51aecec50a7"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5d8a257-8676-4c9c-9f7d-5cf085c406f9">
+                    <propertyInstance
+                      Id="9bc05c99-f9ff-49d4-b133-d31808c24fdb"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07083f53-7a26-4fb1-b7ff-444db7268f49">
+                    <propertyInstance
+                      Id="be171687-f1db-4924-bea1-7afae21c0a6e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="406ef8c5-3393-476c-8ff5-d05686ae054b">
+                    <propertyInstance
+                      Id="95c498e3-d7da-4df5-9bbc-0e6fb0d4359c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="208efbb5-9f0e-493b-9c54-ea5910910540">
+                    <propertyInstance
+                      Id="c556b5ee-86df-482a-bb59-d5bb1508919b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="462d3f6f-6d82-4fc1-ad65-7d3fc4f713ec">
+                    <propertyInstance
+                      Id="541230d3-05f4-4a48-bd27-c79de29d854b"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="dfcc3a4c-634d-4700-a8c7-cb32f141b539"
+                LastKnownName="PropertyChangedEventHandler"
+                LastKnownLocation="Package2_0456.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8d4b13cf-fda7-40d7-8106-d02cf14ee36f"
+            name="RaisePropertyChanged"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bbfb2545-3a05-4483-b9fd-52818a9bf725"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DViewModelBase Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3e7a4e3d-3df9-4150-9cb3-31252c6bea0d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c770040-73ad-43d6-b2a7-0f0bedee8aad">
+                    <propertyInstance
+                      Id="004b796c-720e-45ee-b5ea-44c3fbfdfffd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5644829a-5982-4895-acd7-28a7ee04c872">
+                    <propertyInstance
+                      Id="c542817f-74ad-4c34-a5ee-b7d6bfcb3889"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dee6901-dc11-4f68-ada0-9e9f8e7823af">
+                    <propertyInstance
+                      Id="a06af6b4-9227-43a8-ab81-07fbc8ef44a6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74151768-2c86-47dc-8576-3709d273b7d2">
+                    <propertyInstance
+                      Id="726507a1-c3b0-416d-8a5e-718378663092"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69a8667f-1ac6-4dbc-9bb5-c50d8b01f56b">
+                    <propertyInstance
+                      Id="6c9676c4-5e5d-4072-aed8-1571e6cf3462"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="470d04d9-62be-4158-acd5-1bb2349091fc">
+                    <propertyInstance
+                      Id="4778f8e1-49ce-488e-98a6-66d1c7a059e8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4b4ba702-67e8-41e0-8618-2970a094d880"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fbd5b641-e5d2-4ad1-b713-c7fa1ac39e6e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DViewModelBase Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProjectPlayMyBatik.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4ac24a94-13e2-4893-9728-f39c460819e9"
+            name="ViewModelBase"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a9ae757f-8e74-487e-945d-5564dcfd928f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DViewModelBase Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="db7578a2-cbb8-40fa-b8b5-67488fa72b01"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5a9bf02-639d-42f6-bc99-633f3736fb9d">
+                    <propertyInstance
+                      Id="18df6697-a4e6-4067-a2d6-a9c603cafe01"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbc8e389-9b66-4010-9d27-ff343eb3d98e">
+                    <propertyInstance
+                      Id="335ee837-0a23-43db-bfc0-16a985a8b358"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0d06f2a-9729-45be-96fe-adc134a17296">
+                    <propertyInstance
+                      Id="8ab5c6c3-c7c5-4765-8a48-16d7112bc627"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c32bbb3b-0e62-4b71-a0c8-afb7fc76cd03">
+                    <propertyInstance
+                      Id="ca8aef4f-9f47-4d03-931c-f4469e59f549"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d63843db-00d5-4322-9530-d141d979fb11">
+                    <propertyInstance
+                      Id="b0934780-5a7e-43c9-96a1-b474cf385772"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="766c8d54-5ea9-4675-a336-637b17746279">
+                    <propertyInstance
+                      Id="524023ab-83ee-40cd-a41a-506a524843e1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fe373309-b262-46ce-80fb-d8332e651c6b"
+        name="DelegateCommand"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="97f5a6aa-7027-4fa8-9e34-6a1972897b17"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3b2c51ea-cde5-46b6-a927-f9140a7a12c4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="000e887c-7be7-4333-a83c-89c960398c1b">
+                <propertyInstance
+                  Id="93f763ca-cd2d-40f1-84e4-c82385e94b2b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="419ccdf5-cff1-45aa-8c68-dce8a5d8da8a">
+                <propertyInstance
+                  Id="449de02e-22b0-432a-868d-351f71c56a28"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6670a972-b02b-4621-a8b6-569f389b3817">
+                <propertyInstance
+                  Id="ebbd1a0d-3424-401a-b171-59c84b7f4a91"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d355356-bf97-4429-9680-376fe9265aa2">
+                <propertyInstance
+                  Id="a026cb9a-2664-4a43-b2ce-df10f8cfb2f5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bed1091c-93bf-4d12-a7a5-75d6f522bf37">
+                <propertyInstance
+                  Id="0cb30d1a-4a35-4d6f-8e4f-d09dfd9028f0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6637dde8-574d-4adf-a289-b07353bd0c2c">
+            <interfaceMoniker
+              Id="90761947-045f-4ddb-9bd1-52cf70745425"
+              LastKnownName="ICommand"
+              LastKnownLocation="Package4_0825.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="639d80a9-0c0b-4cab-97f3-fc9ec7ca4534"
+            name="CanExecuteChanged"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="27294662-c1f0-405d-a728-c2437292b516"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3DCanExecuteChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2bf2769f-b273-49b8-8a49-4fe349285630"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2feab00-fcaa-4b32-84e6-9a57e5a3630a">
+                    <propertyInstance
+                      Id="86b58f21-6ed1-42da-a264-bef2b17f5d04"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08aaef01-6ae4-4b46-acb1-470128d0b129">
+                    <propertyInstance
+                      Id="6484cdee-d682-4172-8b28-e0a9a68e9682"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1628a6a6-cd95-4520-b78f-f7a9dce4c02f">
+                    <propertyInstance
+                      Id="70c8268a-5598-4559-965e-a3a5d6da8e40"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fe17084-769f-45d6-b198-3a806a19c774">
+                    <propertyInstance
+                      Id="64e5d447-ced8-4f3a-b94f-af6c621e85e1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca1095ac-0163-4357-b557-1e12f50912b9">
+                    <propertyInstance
+                      Id="fde600c1-beed-45ea-a7c5-bc74bfac8bb1"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="0d6bf7dc-05f7-47c0-8e10-db2e9a8e9e3d"
+                LastKnownName="EventHandler"
+                LastKnownLocation="Package1_0825.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7ea2a217-313e-44cf-b3cd-4719be4af27c"
+            name="canExecute"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fe0bb32b-b776-440c-aa70-d99950280815"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3DcanExecute"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="392ff1c4-6c5f-4822-99dd-0a3d1d52d37b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f02d844-55db-4539-b324-4ad54a07c8de">
+                    <propertyInstance
+                      Id="86c84b58-7373-41c3-a731-233b57c4ca0c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea2d1365-3bd0-49ea-b65c-a2208c592c69">
+                    <propertyInstance
+                      Id="1621bd38-b012-446a-9b81-a37ac73e01a7"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52640b23-aaaf-45a0-901f-4c0915a95460">
+                    <propertyInstance
+                      Id="b0c54c3e-d6d3-4eba-9bd0-87e79675f022"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c83391d1-d25e-4e4d-90f2-62ce14fcf88a">
+                    <propertyInstance
+                      Id="3aa58057-fe24-43b0-aae0-e4a35d32618e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="575091f3-8a2c-44be-ad9d-46af9da80129">
+                    <propertyInstance
+                      Id="98ceefef-2158-44ed-b794-920abe9a2ab8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="fdcf9524-6bce-4970-a44e-1c277f312083"
+                LastKnownName="Func&lt;Object‎, Boolean‎&gt;"
+                LastKnownLocation="Package1_0825.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="72f3cae1-63a1-45e3-abdc-950c1879b022"
+            name="execute"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="371f5095-444e-4b47-a6a9-fb2266e5a2d1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3Dexecute"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d92a0af4-b55c-41ff-b331-df9c54f8240c"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f99b671-4eb6-4dcf-8fdd-c7c7fcb73585">
+                    <propertyInstance
+                      Id="317a098e-6550-4640-89fb-93a5c5d2da6d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a26f8b5-0579-4158-897a-ddb464e939e5">
+                    <propertyInstance
+                      Id="c73164e5-1bcb-4873-8ccd-18d93f18e3f3"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdf5aa39-b0fe-49c5-b3be-78703f1a4730">
+                    <propertyInstance
+                      Id="d922fc73-fa66-4f09-b559-f79d40c1cf8b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e44b659e-bedf-4d0f-bd29-3fa796638418">
+                    <propertyInstance
+                      Id="b1618f5f-fa68-43fc-8f53-b9f3c3ef001e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2697634b-94ef-4075-a923-9270fff6f440">
+                    <propertyInstance
+                      Id="4c1dc1af-d841-456f-8898-5cc2f9332a88"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="42b63ec4-355e-4d63-a896-fbfe21a44e37"
+                LastKnownName="Action&lt;Object‎&gt;"
+                LastKnownLocation="Package1_0825.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f8bec892-b494-4434-b762-4badbcf0930d"
+            name="DelegateCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7cd52ea1-8f5c-418a-a100-c37343e3930c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DAction GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fb9c5d0d-30c5-4b3f-8a58-ae6c396129bc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6309d196-3923-421d-8982-e96efb806f87">
+                    <propertyInstance
+                      Id="a22777fa-7c9a-4c9d-a0f8-3f6f7ccb03b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03e3501c-27f7-46c0-8154-28c18482ab29">
+                    <propertyInstance
+                      Id="1d7629dc-6aaa-4e3b-8984-a3f906536806"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03c776da-909e-49cf-bcc8-98b24935fc1c">
+                    <propertyInstance
+                      Id="1d497207-9da0-41cc-8299-45a3a20da6ef"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32cc852a-c8f1-48c8-bdf9-72a2a86e8f4d">
+                    <propertyInstance
+                      Id="4f22e118-bd25-41ba-a271-3496dd8bc186"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec464528-27f4-42b0-81b2-27511e163e2d">
+                    <propertyInstance
+                      Id="281f3852-b7da-4cbd-b441-75474f9eab50"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0105b1b1-c8b7-43e7-9cf6-8a29b0419194">
+                    <propertyInstance
+                      Id="8b847cbc-aed0-4744-8fc0-8846b30438bc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2d1e0c1b-4bef-40e6-93bb-5fc45ad859e6"
+                  name="execute"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0edf0fcb-796d-42b1-b924-e3df97d884d8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DAction GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]) ParameterIdentifier%3Dexecute"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="42b63ec4-355e-4d63-a896-fbfe21a44e37"
+                      LastKnownName="Action&lt;Object‎&gt;"
+                      LastKnownLocation="Package1_0825.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b78c51ce-ae88-46bf-8cea-edc79de843f4"
+                  name="canExecute"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7ea0d9d0-6dcb-4752-808e-3df940306d33"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DAction GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]) ParameterIdentifier%3DcanExecute"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fdcf9524-6bce-4970-a44e-1c277f312083"
+                      LastKnownName="Func&lt;Object‎, Boolean‎&gt;"
+                      LastKnownLocation="Package1_0825.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="186bd2aa-34c0-475a-b1f2-bf1c4493c642"
+            name="DelegateCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="825f9a3c-12ef-4823-bc91-23e3c8f0def0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DAction GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="916ad9d8-7ecd-4834-8c39-84f7bba6b8d4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="528fd0ce-1c60-4000-b7db-576f102a67c4">
+                    <propertyInstance
+                      Id="a854802c-9760-44e4-ad57-1b42ad31289c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afa3b1e1-2049-4ab6-9b32-55b0f9449b0c">
+                    <propertyInstance
+                      Id="3193ab23-0429-4246-87d5-cf2db0576a95"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b4f67b6-f17c-4966-9a1a-200958a8b99c">
+                    <propertyInstance
+                      Id="f1496dbd-7b06-4327-b2db-4ad8b50c199d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5f3171b-4861-4454-a6ef-3d2ff81a1b01">
+                    <propertyInstance
+                      Id="23ccda8e-ac20-48f9-8126-922787460551"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9b99757-7260-48dd-945f-f646c9b7ca13">
+                    <propertyInstance
+                      Id="5ce1d53d-2ea2-4977-b62a-6147ef55db5f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d3fbe0e-1c50-43e5-a8a0-8b2b3dcc58b1">
+                    <propertyInstance
+                      Id="d63b1b0e-0df9-44e2-a059-14c4766ba5a8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ddb3705-e444-430d-986c-00420557c73c"
+                  name="execute"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e09d2d90-ade0-405c-a0a8-dcbe58b7fc02"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DAction GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))]) ParameterIdentifier%3Dexecute"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="42b63ec4-355e-4d63-a896-fbfe21a44e37"
+                      LastKnownName="Action&lt;Object‎&gt;"
+                      LastKnownLocation="Package1_0825.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b83ab3ea-0cdc-49d3-ab0e-4e369e5ecb52"
+            name="CanExecute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9b4ff188-f4e4-4016-9ab5-e74f6e643cbd"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3DCanExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c1116232-c5fe-4589-8ef5-58c6fb418f4f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6ee3682-a197-4f03-bb87-6d454f2f37a8">
+                    <propertyInstance
+                      Id="6f8e1788-b7a2-4e62-90fa-698dcdfb5d80"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="273864ea-6c2d-4b2e-a1a3-6771ffe73512">
+                    <propertyInstance
+                      Id="e428041b-5cba-47a9-a78e-4e9ff5ed7bd0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bb13e9e-20c2-49b8-834d-67e9f934b446">
+                    <propertyInstance
+                      Id="2b7143a2-381f-4020-9140-18498c0ce51f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df9975ac-0dc3-49c3-98a9-b82d9a3c88a9">
+                    <propertyInstance
+                      Id="9c667b79-1e33-4dac-8fac-313ecdcdc345"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10ce3536-59ec-4660-bc1c-690dd7df930b">
+                    <propertyInstance
+                      Id="54fa9eeb-6458-4c88-a14e-0f87f372065d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e1e7da2-2e42-4f09-89c2-0183141c2245">
+                    <propertyInstance
+                      Id="f931c912-e2af-4201-ae5c-ef1ab7f25072"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="840cd92d-f045-455f-8e9c-ccd2b3c66cfa"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProjectPlayMyBatik.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="caff1844-914f-4694-aac2-bce1f23671ca"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fafbdd03-6f66-408e-9fb4-b3fb7d40ce9e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3DCanExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="321856fa-cae8-46ff-810d-7e32d9e05726"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0825.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a04e053a-3599-41c2-b440-36c60cfa0518"
+            name="Execute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="49117cca-c283-4195-b09c-53d24093d758"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3DExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d8ea522f-81a2-4838-8b9a-d89eb044afb2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01d50ec0-702d-4cb0-8e7d-ff329b435164">
+                    <propertyInstance
+                      Id="9ea220e5-c57c-4998-962e-f7d16326425c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e086b80-1929-46f2-b5d9-9c9e5f775c86">
+                    <propertyInstance
+                      Id="0cc1f9c5-4818-4b07-bfa3-01c8492eb11c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="182b6361-438d-41ae-b037-a48a366c2834">
+                    <propertyInstance
+                      Id="c1daaed6-4feb-4d06-bb47-cf833a0f81a0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53631b28-a9f8-4ccd-ac0e-cf69c9cec519">
+                    <propertyInstance
+                      Id="cfb253a3-3fb3-4f08-8b09-6090c14c2c14"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d70f5a2-2d60-4a2c-aa2e-52180e056e10">
+                    <propertyInstance
+                      Id="1941414c-8167-4c0f-9abe-bd850c4e3b75"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa393e99-8744-439e-8149-cb68f5227cff">
+                    <propertyInstance
+                      Id="e2a25e4c-2541-49a3-a5cc-babfb3acd6d1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="431c62df-1b74-486c-8de0-c70394a5a28c"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c7063041-85e7-4cb5-9234-f9e06d05c55f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3D(Name%3DExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="321856fa-cae8-46ff-810d-7e32d9e05726"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0825.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d9d954d4-2b9c-4930-a5de-6837c47c4d03"
+            name="RaiseCanExecuteChanged"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0641b1cc-4fbb-4e1a-a2a5-88e3d73b1545"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FNgebatik%2FNgebatik%2FBin%2FDebug%2FNgebatik.dll Namespace%3DPlayMyBatik.Common Type%3DDelegateCommand Member%3DRaiseCanExecuteChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ff1eafdf-5ffc-481e-a46f-3734124a414f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b89d064c-c58f-45d7-9743-3bb74e217d02">
+                    <propertyInstance
+                      Id="98ff21e3-cec8-41e4-a22a-687669700c8b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efde0d60-0d41-43f9-8489-170530ae2146">
+                    <propertyInstance
+                      Id="0e0dc1ae-5c63-4215-9be8-53ca11bf7319"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e924036-4c0e-4fd0-8edb-2eecb7b8c4c4">
+                    <propertyInstance
+                      Id="167cfd31-dc11-425f-b612-d3652df62ce2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35e46c46-53fb-4986-bd58-1b16bde9c3fc">
+                    <propertyInstance
+                      Id="bd30e04b-597d-46b8-b580-af960dc460a9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b44f6ec-8855-4434-98a6-dbc06759ee9f">
+                    <propertyInstance
+                      Id="ac5d5da3-f242-46f0-8fbe-8afa7ffc57a1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc62533d-4951-48f9-ba80-f6e865af0933">
+                    <propertyInstance
+                      Id="b18f379a-4246-49f9-b028-533b4a85df75"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

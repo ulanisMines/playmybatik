@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="7295a382-d4b0-41d5-8cf0-c864de2859d3"
+  name="Net"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3cd7e94e-3352-4f1c-8ac5-60315111da97"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Net"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="88fb7432-a644-4af0-afcb-82cd1dbf4c7f"
+        name="DownloadStringCompletedEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="69016990-ba5d-43ff-8a61-4331c4faa238"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2FSystem.Net.dll&quot; Namespace%3DSystem.Net Type%3DDownloadStringCompletedEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="650e030d-deb9-49a0-9030-81263510f797"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="05431903-26ba-4554-9ceb-77ffeeb43fb2">
+                <propertyInstance
+                  Id="510b2e92-d1e2-48cc-a9b5-e17dd928afe0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="920516ab-7375-4666-891a-b1123de565ba">
+                <propertyInstance
+                  Id="7990a068-9be3-4dd2-b171-fde1346ef7a4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="733adb7e-49c2-422a-a168-1294c7743c73">
+                <propertyInstance
+                  Id="a075962c-5790-4b84-8bde-acf10d4fc7ae"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c27240bd-8021-4ed8-9725-a253cea407f1">
+                <propertyInstance
+                  Id="0de249b9-d73b-4bfe-a51b-2ccd7fa4813a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="119af1b6-a79c-47c6-8505-5fb7517002cd">
+                <propertyInstance
+                  Id="14ce268d-b89a-471b-9d7f-c109739defdf"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

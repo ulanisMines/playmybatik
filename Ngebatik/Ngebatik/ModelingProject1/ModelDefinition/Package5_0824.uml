@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="aa4ba8fa-659d-48b5-a8e4-404912055a28"
+  name="Animation"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2afbd4f3-4dac-4b93-97c2-2f83d20a0052"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Windows.Media.Animation"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="da21c8f9-452c-4075-b627-0d8aaa82e5b0"
+        name="Storyboard"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="629c8b21-c1de-4a4a-9d1f-9ba80a8039a8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2FSystem.Windows.dll&quot; Namespace%3DSystem.Windows.Media.Animation Type%3DStoryboard"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7fe9283e-c0cf-412c-a0ac-3ac08ca873f0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f3bd428-1b5f-487c-ade5-2d179132f087">
+                <propertyInstance
+                  Id="6a426b2c-6525-44df-a9c9-5c207ee68558"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7c2da948-30b2-445b-bcfe-4cc8a7e3df62">
+                <propertyInstance
+                  Id="88a5ece7-d783-4035-a3e5-58e97a070e24"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="21bff760-f776-4ee9-b87d-063b1ed8faec">
+                <propertyInstance
+                  Id="9492efd6-e312-4aa5-98bd-b0e349368b2d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="44884c38-d507-4151-8e18-d1083a644218">
+                <propertyInstance
+                  Id="d6e0aa26-7efa-450a-a89c-f820602312e6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="779867d2-9714-4791-ad1f-811338d48399">
+                <propertyInstance
+                  Id="407f1a6d-64f6-4c75-8eda-224262304298"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
