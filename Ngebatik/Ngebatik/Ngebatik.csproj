@@ -100,11 +100,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Drawing.cs" />
+    <Compile Include="FinishNgelorod.xaml.cs">
+      <DependentUpon>FinishNgelorod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinishMedeli.xaml.cs">
+      <DependentUpon>FinishMedeli.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinishNembok.xaml.cs">
+      <DependentUpon>FinishNembok.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FinishNgelowong.xaml.cs">
       <DependentUpon>FinishNgelowong.xaml</DependentUpon>
     </Compile>
     <Compile Include="Kelas\Navigation.cs" />
+    <Compile Include="NgelorodPage.xaml.cs">
+      <DependentUpon>NgelorodPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="navigationeventargs.cs" />
+    <Compile Include="MedeliPage.xaml.cs">
+      <DependentUpon>MedeliPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NembokPage.xaml.cs">
       <DependentUpon>NembokPage.xaml</DependentUpon>
     </Compile>
@@ -156,6 +171,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="FinishNgelorod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FinishMedeli.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FinishNembok.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="FinishNgelowong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -164,9 +191,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NembokPage.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="NgelorodPage.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MedeliPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NembokPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="NyorekPage.xaml">
       <SubType>Designer</SubType>

@@ -10,10 +10,10 @@ using Microsoft.Phone.Shell;
 
 namespace Ngebatik
 {
-    public partial class FinishNgelowong : PhoneApplicationPage
+    public partial class FinishMedeli: PhoneApplicationPage
     {
         int score;
-        public FinishNgelowong()
+        public FinishMedeli()
         {
             InitializeComponent();
         }
@@ -33,10 +33,9 @@ namespace Ngebatik
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //var rootFrame = (App.Current as App).RootFrame;
-            //rootFrame.Navigate(new System.Uri("/NembokPage.xaml", UriKind.Relative));
+           
 
-            NavigationService.Navigate(new Uri("/NembokPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/NgelorodPage.xaml", UriKind.Relative));
         }
     }
 }

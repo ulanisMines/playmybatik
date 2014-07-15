@@ -16,6 +16,7 @@ using System.Threading;
 using Ngebatik.Kelas;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
+using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 
 namespace Ngebatik
@@ -38,10 +39,13 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain=10;
+        int waktubermain=60;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
-        int score=0;
+       public static int scoreNyorek=0;
+        private Random _rand = new Random();
+
+        private Brush selectedColor = new SolidColorBrush(Colors.Black);
 
 
         public NyorekPage()
@@ -67,7 +71,6 @@ namespace Ngebatik
             detikBermain++;
             WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
             ds.Start();
-            
             if (waktubermain == detikBermain)
             {
                 detikBermain = 0;
@@ -106,16 +109,15 @@ namespace Ngebatik
 
         private void Touch_FrameReported(object sender, TouchFrameEventArgs e)
         {
-           
-            int pointsNumber = e.GetTouchPoints(canvasGambarBatik).Count;
-            TouchPointCollection pointCollection = e.GetTouchPoints(canvasGambarBatik);
-            var imagePen = (CompositeTransform)penBatik.RenderTransform;
-
-             if (kuasBasah)
+            if (kuasBasah)
             {
+                int pointsNumber = e.GetTouchPoints(canvasGambarBatik).Count;
+                TouchPointCollection pointCollection = e.GetTouchPoints(canvasGambarBatik);
+                var imagePen = (CompositeTransform) penBatik.RenderTransform;
+
                 for (int i = 0; i < pointsNumber; i++)
                 {
-                    score++;
+                    scoreNyorek++;
                     if (pointCollection[i].Action == TouchAction.Down)
                     {
                         if ((pointCollection[i].Position.X > 29) && (pointCollection[i].Position.X < 555))
@@ -140,8 +142,8 @@ namespace Ngebatik
                             imagePen.TranslateX = pointCollection[i].Position.X + 100;
                             imagePen.TranslateY = pointCollection[i].Position.Y - 290;
 
-                            line.Stroke = new SolidColorBrush(Colors.Red);
-                            line.Fill = new SolidColorBrush(Colors.Red);
+                            line.Stroke = selectedColor;
+                            line.Fill = selectedColor;
                             line.StrokeThickness = 4.0;
                             canvasGambarBatik.Children.Add(line);
 
@@ -151,7 +153,7 @@ namespace Ngebatik
                     }
                 }
             }
-             scoreNgelowongText.Text = score.ToString();
+             scoreNgelowongText.Text = scoreNyorek.ToString();
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
@@ -214,21 +216,20 @@ namespace Ngebatik
 
         private Color ConvertHexStringToColour(string hexString)
         {
-            byte a = 0;
+            byte a = 0xff;
             byte r = 0;
             byte g = 0;
             byte b = 0;
             if (hexString.StartsWith("#"))
             {
-                hexString = hexString.Substring(1, 8);
+                hexString = hexString.Substring(1);
             }
-            a = Convert.ToByte(Int32.Parse(hexString.Substring(0, 2),
+            r = Convert.ToByte(Int32.Parse(hexString.Substring(0, 2),
                 System.Globalization.NumberStyles.AllowHexSpecifier));
-            r = Convert.ToByte(Int32.Parse(hexString.Substring(2, 2),
+            g = Convert.ToByte(Int32.Parse(hexString.Substring(2, 2),
                 System.Globalization.NumberStyles.AllowHexSpecifier));
-            g = Convert.ToByte(Int32.Parse(hexString.Substring(4, 2),
+            b = Convert.ToByte(Int32.Parse(hexString.Substring(4, 2),
                 System.Globalization.NumberStyles.AllowHexSpecifier));
-            b = Convert.ToByte(Int32.Parse(hexString.Substring(6, 2), System.Globalization.NumberStyles.AllowHexSpecifier));
             return Color.FromArgb(a, r, g, b);
         }
 
@@ -261,10 +262,11 @@ namespace Ngebatik
                 gf.Warna3 = item.SelectToken("Warna3").ToString();
                 gf.Warna4 = item.SelectToken("Warna4").ToString();
 
-                MessageBox.Show(item.ToString());
+            
             }
-
-             if (gf.Warna1 == null)
+           
+             Helper.hasilDownload = gf;
+            if (gf.Warna1 == null || !gf.Warna1.StartsWith("#"))
             {
                 Warna1El.Visibility = Visibility.Collapsed;
                 // Warna1.Visibility = Visibility.Collapsed;
@@ -276,7 +278,7 @@ namespace Ngebatik
                 Warna1El.Fill = new SolidColorBrush(myColour);
              }
 
-            if (gf.Warna2== null)
+            if (gf.Warna2 == null || !gf.Warna2.StartsWith("#"))
             {
                 Warna2El.Visibility = Visibility.Collapsed;
             }
@@ -286,7 +288,8 @@ namespace Ngebatik
                 Color myColour = ConvertHexStringToColour(strColour);
                 Warna2El.Fill = new SolidColorBrush(myColour);
             }
-            if (gf.Warna3 == null)
+
+            if (gf.Warna3 == null || !gf.Warna3.StartsWith("#"))
             {
                 Warna3El.Visibility = Visibility.Collapsed;
             }
@@ -296,7 +299,8 @@ namespace Ngebatik
                 Color myColour = ConvertHexStringToColour(strColour);
                 Warna3El.Fill = new SolidColorBrush(myColour);
             }
-            if (gf.Warna4 == null)
+
+            if (gf.Warna4 == null || !gf.Warna4.StartsWith("#"))
             {
                 Warna4El.Visibility = Visibility.Collapsed;
             }
@@ -366,26 +370,43 @@ namespace Ngebatik
 
         private void Image_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
         {
+           
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Touch.FrameReported -= new TouchFrameEventHandler(Touch_FrameReported);
+
+            var hasilNgelowong2 = canvasGambarBatik.Children.OfType<Line>().ToList();
+            Helper.hasilNgelowong = hasilNgelowong2;
+
+            
+
+            NavigationService.Navigate(new Uri("/FinishNgelowong.xaml?score="+scoreNyorek, UriKind.Relative));
+            btnselesai.Visibility = Visibility.Collapsed;
+        }
+
+        private void Warna1El_OnTap(object sender, GestureEventArgs e)
+        {
             if (isFirstTap)
             {
                 ds.Start();
                 isFirstTap = false;
             }
-
-            if (!kuasBasah)
-            {
-                Random rand = new Random();
-                waktuBasahKuas = rand.Next(7, 15);
+           // var imagePen = (CompositeTransform) penBatik.RenderTransform;
+           // imagePen.TranslateX = pointCollection[i].Position.X + 100;
+            //imagePen.TranslateY = pointCollection[i].Position.Y - 290;
+                selectedColor = ((Ellipse) sender).Fill;
+                waktuBasahKuas = _rand.Next(7, 15);
                 kuasBasah = true;
-                dt.Start();
-            }
-        }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
+                detikCanting = 0;
+
+                if (!dt.IsEnabled)
+                {
+                    dt.Start();
+                }
             
-            NavigationService.Navigate(new Uri("/FinishNgelowong.xaml?score="+score, UriKind.Relative));
-            btnselesai.Visibility = Visibility.Collapsed;
         }
     }
 }

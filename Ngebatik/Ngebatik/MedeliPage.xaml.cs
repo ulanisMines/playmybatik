@@ -21,7 +21,7 @@ using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 namespace Ngebatik
 {
-    public partial class NembokPage : PhoneApplicationPage
+    public partial class MedeliPage: PhoneApplicationPage
     {
         private const float PreMultiplyFactor = 1 / 255f;
         private bool isFirstTap;
@@ -42,13 +42,14 @@ namespace Ngebatik
         int waktubermain=60;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
-       public static int scoreNembok=0;
+        public static int scoreMedeli;
         private Random _rand = new Random();
+        private Boolean selectedcolor1;
 
         private Brush selectedColor = new SolidColorBrush(Colors.Black);
 
 
-        public NembokPage()
+        public MedeliPage()
         {
             isFirstTap = true;
             try
@@ -69,7 +70,7 @@ namespace Ngebatik
         private void ds_Tick(object sender, EventArgs e)
         {
             detikBermain++;
-            WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
+            //WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
             ds.Start();
             if (waktubermain == detikBermain)
             {
@@ -96,7 +97,7 @@ namespace Ngebatik
         private void dt_Tick(object sender, EventArgs e)
         {
             detikCanting++;  
-                waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
+                //waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
                 if (detikCanting == waktuBasahKuas)
                 {
                     detikCanting = 0;
@@ -106,56 +107,17 @@ namespace Ngebatik
 
              
         }
-
+        
         private void Touch_FrameReported(object sender, TouchFrameEventArgs e)
         {
-           
-
-             if (kuasBasah)
-            {
-            int pointsNumber = e.GetTouchPoints(canvasGambarBatik).Count;
-            TouchPointCollection pointCollection = e.GetTouchPoints(canvasGambarBatik);
-            var imagePen = (CompositeTransform)penBatik.RenderTransform;
-
-                for (int i = 0; i < pointsNumber; i++)
-                {
-                    scoreNembok++;
-                    if (pointCollection[i].Action == TouchAction.Down)
-                    {
-                        if ((pointCollection[i].Position.X > 29) && (pointCollection[i].Position.X < 555))
-                        {
-                            preXArray[i] = pointCollection[i].Position.X - 30;
-                            preYArray[i] = pointCollection[i].Position.Y - 55;
-                            imagePen.TranslateX = pointCollection[i].Position.X + 100;
-                            imagePen.TranslateY = pointCollection[i].Position.Y - 290;
-                        }
-                    }
-                    if (pointCollection[i].Action == TouchAction.Move)
-                    {
-                        if ((pointCollection[i].Position.X > 29) && (pointCollection[i].Position.X < 555))
-                        {
-                            Line line = new Line();
-
-                            line.X1 = preXArray[i];
-                            line.Y1 = preYArray[i];
-                            line.X2 = pointCollection[i].Position.X - 30;
-                            line.Y2 = pointCollection[i].Position.Y - 55;
-
-                            imagePen.TranslateX = pointCollection[i].Position.X + 100;
-                            imagePen.TranslateY = pointCollection[i].Position.Y - 290;
-
-                            line.Stroke = selectedColor;
-                            line.Fill = selectedColor;
-                            line.StrokeThickness = 4.0;
-                            canvasGambarBatik.Children.Add(line);
-
-                            preXArray[i] = pointCollection[i].Position.X - 30;
-                            preYArray[i] = pointCollection[i].Position.Y - 55;
-                        }
-                    }
-                }
+            
+             if (kuasBasah && !selectedcolor1)
+             {
+                 selectedcolor1 = true;
+            canvasGambarBatik.Background= selectedColor;
             }
-             scoreNgelowongText.Text = scoreNembok.ToString();
+         
+             scoreNgelowongText.Text = scoreMedeli.ToString();
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
@@ -205,7 +167,7 @@ namespace Ngebatik
                 MessageBox.Show("Nyorek"+ez.Message);
             }
 
-            foreach (Line oldLine in Helper.hasilNgelowong)
+            foreach (Line oldLine in Helper.hasilNembok)
             {
                 Line line = new Line();
 
@@ -361,12 +323,8 @@ namespace Ngebatik
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Touch.FrameReported -= new TouchFrameEventHandler(Touch_FrameReported);
-
-            var hasilNembok2 = canvasGambarBatik.Children.OfType<Line>().ToList();
-            Helper.hasilNembok = hasilNembok2;
             
-            NavigationService.Navigate(new Uri("/FinishNembok.xaml?score="+scoreNembok, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/FinishNgelowong.xaml?score="+scoreMedeli, UriKind.Relative));
             btnselesai.Visibility = Visibility.Collapsed;
         }
 

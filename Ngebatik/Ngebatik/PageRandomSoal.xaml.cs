@@ -20,23 +20,17 @@ namespace Ngebatik
 {
     public partial class PageRandomSoal : PhoneApplicationPage
     {
-        
+
         //getsoalViewModel DataContext;
+        private getsoalViewModel Soal;
         public PageRandomSoal()
         {
             InitializeComponent();
-           DataContext = new getsoalViewModel();
 
+            Soal = new getsoalViewModel();
+            DataContext = Soal;
         }
 
-          
-
-        
-
-        private void ContentPanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/PageSoal.xaml", UriKind.Relative));
-        }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -46,10 +40,10 @@ namespace Ngebatik
             if (NavigationContext.QueryString.TryGetValue("Level", out msg))
             {
                 //MessageBox.Show(msg);
-              //  LoadURL(msg);
+                //LoadURL(msg);
             }
         }
-        
+
         //public void LoadURL(String level)
         //{
         //    //MessageBox.Show(level);
@@ -84,41 +78,31 @@ namespace Ngebatik
         //    }
         //}
 
-       
-        private void OpsiB(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-
-            MessageBoxResult result =
-                MessageBox.Show("Maaf jawaban yang anda pilih salah, Silahkan memilih level permainan kembali",
-                "Pengetahuan Batik", MessageBoxButton.OK);
-
-            if (result == MessageBoxResult.OK)
-            {
-                NavigationService.Navigate(new Uri("/SetLevel.xaml", UriKind.Relative));
-            }
-
-        }
-
-      
-
-       
         private void BindingOpsiBOnClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            Image gambar = (Image)sender;
-
-            NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
+            Image gambar = (Image) sender;
+            if (Soal.GetSoalCollection[0].OpsiB == Soal.GetSoalCollection[0].Jawaban)
+            {
+                NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("Maaf, jawaban salah.");
+            }
         }
 
         private void BindingOpsiAOnClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            Image gambar = (Image)sender;
-
-            NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
+            Image gambar = (Image) sender;
+            if (Soal.GetSoalCollection[0].OpsiA == Soal.GetSoalCollection[0].Jawaban)
+            {
+                NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("Maaf, jawaban salah.");
+            }
         }
-
-
-
-
 
     }
 }

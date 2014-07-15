@@ -16,12 +16,11 @@ namespace Ngebatik
         {
             InitializeComponent();
         }
-
-
+        
         public string Level { get; set; }
 
-    
-               private void Button_MudahOnClick(object sender, RoutedEventArgs e)
+
+        private void Button_MudahOnClick(object sender, RoutedEventArgs e)
         {
             Helper.Level = "Easy";
             NavigationService.Navigate(new Uri("/PageRandomSoal.xaml?Level=Easy", UriKind.Relative));
@@ -39,8 +38,8 @@ namespace Ngebatik
             NavigationService.Navigate(new Uri("/PageRandomSoal.xaml?Level=Hard", UriKind.Relative));
         }
 
-       
 
-      
+
+
     }
 }
