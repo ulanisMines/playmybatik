@@ -94,14 +94,14 @@ namespace Ngebatik
         private void BindingOpsiAOnClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
             Image gambar = (Image) sender;
-            if (Soal.GetSoalCollection[0].OpsiA == Soal.GetSoalCollection[0].Jawaban)
-            {
+//            if (Soal.GetSoalCollection[0].OpsiA == Soal.GetSoalCollection[0].Jawaban)
+//            {
                 NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
-            }
-            else
-            {
-                MessageBox.Show("Maaf, jawaban salah.");
-            }
+//            }
+//            else
+//            {
+//                MessageBox.Show("Maaf, jawaban salah.");
+//            }
         }
 
     }

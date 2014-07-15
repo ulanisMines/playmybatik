@@ -12,29 +12,25 @@ namespace Ngebatik
 {
     public partial class FinishNembok: PhoneApplicationPage
     {
-        int score;
         public FinishNembok()
         {
             InitializeComponent();
         }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
-            base.OnNavigatedTo(e);
-
             string msg = "null";
             if (NavigationContext.QueryString.TryGetValue("score", out msg))
             {
-                score = Convert.ToInt32(msg);
+                int score = Convert.ToInt32(msg);
                 ScoreNgelowongText.Text = score.ToString();
-
             }
+
+            base.OnNavigatedTo(e);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           
-
             NavigationService.Navigate(new Uri("/MedeliPage.xaml", UriKind.Relative));
         }
     }
