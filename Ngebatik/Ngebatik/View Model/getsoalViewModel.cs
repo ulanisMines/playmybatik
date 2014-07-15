@@ -93,12 +93,16 @@ namespace Ngebatik.View_Model
             JArray jItem = JArray.Parse(jRoot.SelectToken("result").ToString());
             foreach (JObject item in jItem)
             {
-                getsoal gs = new getsoal();
-                gs.idSoal = item.SelectToken("idSoal").ToString();
                 Pertanyaan = item.SelectToken("Pertanyaan").ToString();
-                gs.Level = item.SelectToken("Level").ToString();
                 OpsiA = Helper.img_BASE + item.SelectToken("OpsiA").ToString();
                 OpsiB = Helper.img_BASE + item.SelectToken("OpsiB").ToString();
+
+                getsoal gs = new getsoal();
+                gs.idSoal = item.SelectToken("idSoal").ToString();
+                gs.Pertanyaan = item.SelectToken("Pertanyaan").ToString();
+                gs.Level = item.SelectToken("Level").ToString();
+                gs.OpsiA = item.SelectToken("OpsiA").ToString();
+                gs.OpsiB = item.SelectToken("OpsiB").ToString();
                 gs.Jawaban = item.SelectToken("Jawaban").ToString();
 
                 GetSoalCollection.Add(gs);

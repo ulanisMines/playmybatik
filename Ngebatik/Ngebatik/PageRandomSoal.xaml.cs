@@ -78,31 +78,31 @@ namespace Ngebatik
         //    }
         //}
 
-
-
-
-
         private void BindingOpsiBOnClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
             Image gambar = (Image) sender;
-            if (Soal.OpsiB == Soal.GetSoalCollection[0].Jawaban)
+            if (Soal.GetSoalCollection[0].OpsiB == Soal.GetSoalCollection[0].Jawaban)
             {
                 NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("Maaf, jawaban salah.");
             }
         }
 
         private void BindingOpsiAOnClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
             Image gambar = (Image) sender;
-            if (Soal.OpsiA == Soal.GetSoalCollection[0].Jawaban)
+            if (Soal.GetSoalCollection[0].OpsiA == Soal.GetSoalCollection[0].Jawaban)
             {
                 NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
             }
+            else
+            {
+                MessageBox.Show("Maaf, jawaban salah.");
+            }
         }
-
-
-
-
 
     }
 }
