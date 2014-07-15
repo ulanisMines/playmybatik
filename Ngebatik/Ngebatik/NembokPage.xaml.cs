@@ -39,10 +39,10 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain=60;
+        int waktubermain = 60;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
-       public static int scoreNembok=0;
+        public static int scoreNembok = 0;
         private Random _rand = new Random();
 
         private Brush selectedColor = new SolidColorBrush(Colors.Black);
@@ -58,7 +58,7 @@ namespace Ngebatik
                 dt.Interval = TimeSpan.FromSeconds(1);
                 ds.Interval = TimeSpan.FromSeconds(1);
                 dt.Tick += dt_Tick;
-                ds.Tick +=ds_Tick;
+                ds.Tick += ds_Tick;
             }
             catch (Exception e)
             {
@@ -92,30 +92,30 @@ namespace Ngebatik
             this.panahImage.Source = bmp;
         }
 
-        
+
         private void dt_Tick(object sender, EventArgs e)
         {
-            detikCanting++;  
-                waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
-                if (detikCanting == waktuBasahKuas)
-                {
-                    detikCanting = 0;
-                    kuasBasah = false;
-                    dt.Stop();
-                }
+            detikCanting++;
+            waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
+            if (detikCanting == waktuBasahKuas)
+            {
+                detikCanting = 0;
+                kuasBasah = false;
+                dt.Stop();
+            }
 
-             
+
         }
 
         private void Touch_FrameReported(object sender, TouchFrameEventArgs e)
         {
-           
 
-             if (kuasBasah)
+
+            if (kuasBasah)
             {
-            int pointsNumber = e.GetTouchPoints(canvasGambarBatik).Count;
-            TouchPointCollection pointCollection = e.GetTouchPoints(canvasGambarBatik);
-            var imagePen = (CompositeTransform)penBatik.RenderTransform;
+                int pointsNumber = e.GetTouchPoints(canvasGambarBatik).Count;
+                TouchPointCollection pointCollection = e.GetTouchPoints(canvasGambarBatik);
+                var imagePen = (CompositeTransform) penBatik.RenderTransform;
 
                 for (int i = 0; i < pointsNumber; i++)
                 {
@@ -155,19 +155,19 @@ namespace Ngebatik
                     }
                 }
             }
-             scoreNgelowongText.Text = scoreNembok.ToString();
+            scoreNgelowongText.Text = scoreNembok.ToString();
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-          string msg;
-         
+            string msg;
+
 
 
             try
             {
                 BitmapImage bitmapGet = Navigation.Bmp;
-                    //PhoneApplicationService.Current.State["imageBatik"] as BitmapImage;
+                //PhoneApplicationService.Current.State["imageBatik"] as BitmapImage;
                 System.Windows.Media.Imaging.WriteableBitmap wb = new System.Windows.Media.Imaging.WriteableBitmap(bitmapGet);
                 wbEdited = new System.Windows.Media.Imaging.WriteableBitmap(width, height);
                 wbHasilSobel = new System.Windows.Media.Imaging.WriteableBitmap(width, height);
@@ -185,7 +185,7 @@ namespace Ngebatik
 
                         grayScale = (r + g + b) / 3;
 
-                        SetPikselCitra(x, y, (byte)a, grayScale, grayScale, grayScale);
+                        SetPikselCitra(x, y, (byte) a, grayScale, grayScale, grayScale);
                     }
                 }
 
@@ -196,13 +196,13 @@ namespace Ngebatik
                 this.imageBatik.Source = bitmapGet;
 
                 LoadURL();
-                
-                   
-            
+
+
+
             }
             catch (Exception ez)
             {
-                MessageBox.Show("Nyorek"+ez.Message);
+                MessageBox.Show("Nyorek" + ez.Message);
             }
 
             foreach (Line oldLine in Helper.hasilNgelowong)
@@ -246,8 +246,8 @@ namespace Ngebatik
         {
 
             getfilosofi gf = Helper.hasilDownload;
-          
-           if (gf.Warna1 == null || !gf.Warna1.StartsWith("#"))
+
+            if (gf.Warna1 == null || !gf.Warna1.StartsWith("#"))
             {
                 Warna1El.Visibility = Visibility.Collapsed;
                 // Warna1.Visibility = Visibility.Collapsed;
@@ -292,16 +292,16 @@ namespace Ngebatik
                 Warna4El.Fill = new SolidColorBrush(myColour);
             }
         }
-          private void DownloadFilosofiBatik(object sender, DownloadStringCompletedEventArgs e)
+        private void DownloadFilosofiBatik(object sender, DownloadStringCompletedEventArgs e)
         {
 
-           
+
         }
         public void SetPikselCitra(int x, int y, byte alpha, int r, int g, int b)
         {
             float ai = alpha * PreMultiplyFactor;
-            wbEdited.Pixels[(y * width) + x] = (alpha << 24) | ((byte)(r * ai) << 16) |
-                ((byte)(g * ai) << 8) | (byte)(b * ai);
+            wbEdited.Pixels[(y * width) + x] = (alpha << 24) | ((byte) (r * ai) << 16) |
+                ((byte) (g * ai) << 8) | (byte) (b * ai);
         }
 
         private void Pot_Tapped(object sender, Microsoft.Phone.Controls.GestureEventArgs e)
@@ -317,7 +317,7 @@ namespace Ngebatik
 
         private void Pen_Drag(object sender, ManipulationDeltaEventArgs e)
         {
-            
+
         }
 
         private void Panah_Tapped(object sender, Microsoft.Phone.Controls.GestureEventArgs e)
@@ -338,7 +338,7 @@ namespace Ngebatik
 
         private void panahImage_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            
+
             if (!lihatBatikAsli)
             {
                 SetPanahKeatas();
@@ -356,7 +356,7 @@ namespace Ngebatik
 
         private void Image_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
         {
-           
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -365,8 +365,8 @@ namespace Ngebatik
 
             var hasilNembok2 = canvasGambarBatik.Children.OfType<Line>().ToList();
             Helper.hasilNembok = hasilNembok2;
-            
-            NavigationService.Navigate(new Uri("/FinishNembok.xaml?score="+scoreNembok, UriKind.Relative));
+
+            NavigationService.Navigate(new Uri("/FinishNembok.xaml?score=" + scoreNembok, UriKind.Relative));
             btnselesai.Visibility = Visibility.Collapsed;
         }
 
@@ -377,20 +377,20 @@ namespace Ngebatik
                 ds.Start();
                 isFirstTap = false;
             }
-           // var imagePen = (CompositeTransform) penBatik.RenderTransform;
-           // imagePen.TranslateX = pointCollection[i].Position.X + 100;
+            // var imagePen = (CompositeTransform) penBatik.RenderTransform;
+            // imagePen.TranslateX = pointCollection[i].Position.X + 100;
             //imagePen.TranslateY = pointCollection[i].Position.Y - 290;
-                selectedColor = ((Ellipse) sender).Fill;
-                waktuBasahKuas = _rand.Next(7, 15);
-                kuasBasah = true;
+            selectedColor = ((Ellipse) sender).Fill;
+            waktuBasahKuas = _rand.Next(7, 15);
+            kuasBasah = true;
 
-                detikCanting = 0;
+            detikCanting = 0;
 
-                if (!dt.IsEnabled)
-                {
-                    dt.Start();
-                }
-            
+            if (!dt.IsEnabled)
+            {
+                dt.Start();
+            }
+
         }
     }
 }
