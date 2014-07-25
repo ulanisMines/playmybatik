@@ -39,7 +39,7 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain = 60;
+        int waktubermain = 10;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
         int score = 100;
@@ -70,13 +70,14 @@ namespace Ngebatik
         private void ds_Tick(object sender, EventArgs e)
         {
             detikBermain++;
-            // WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
+             WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
             ds.Start();
             if (waktubermain == detikBermain)
             {
                 detikBermain = 0;
                 ds.Stop();
                 btnselesai.Visibility = Visibility.Visible;
+              
             }
 
         }
@@ -117,12 +118,12 @@ namespace Ngebatik
                 canvasGambarBatik.Background = selectedColor;
             }
 
-            scoreNgelowongText.Text = score.ToString();
+            scoreNgelorodText.Text = score.ToString();
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            string msg;
+            //string msg;
 
 
 
@@ -347,6 +348,11 @@ namespace Ngebatik
             {
                 dt.Start();
             }
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
 
         }
     }

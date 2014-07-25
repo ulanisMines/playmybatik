@@ -67,21 +67,26 @@
 
             </StackPanel>
             
-            <Button x:Name="btnselesai" Content="Selesai" HorizontalAlignment="Left" Margin="566,11,0,0" VerticalAlignment="Top" Width="204" Click="Button_Click_1"/>
+            <Button x:Name="btnselesai"  HorizontalAlignment="Left" Margin="619,5,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click_1" BorderThickness="0" Height="81">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Asset/button/ceklis fix.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
         <Image x:Name="imageBatik" HorizontalAlignment="Center" Height="326" VerticalAlignment="Top" Width="521" Margin="140,-326,139,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
         	<Image.RenderTransform>
         		<CompositeTransform/>
         	</Image.RenderTransform>
         </Image>
-      <Image x:Name="panahImage" HorizontalAlignment="Left" Height="49" Margin="67,10,0,0" VerticalAlignment="Top" Width="51" Source="/Asset/panah bawah.png" ManipulationDelta="Pen_Drag" RenderTransformOrigin="0.444,0.507" Tap="panahImage_Tap" >
+        <Image x:Name="panahImage" HorizontalAlignment="Left" Height="49" Margin="67,10,0,0" VerticalAlignment="Top" Width="51" Source="/Asset/panah bawah.png" RenderTransformOrigin="0.444,0.507" Tap="panahImage_Tap" >
             <Image.RenderTransform>
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
        
-        <TextBlock HorizontalAlignment="Left" Margin="722,94,0,0" TextWrapping="Wrap" Text="Score" Foreground="Black" VerticalAlignment="Top"/>
-        <TextBlock x:Name="scoreNgelowongText" HorizontalAlignment="Left" Margin="722,126,0,0" TextWrapping="Wrap" Text="0" Foreground="Black" FontSize="36" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="414,418,0,0" TextWrapping="Wrap" Text="Score" Foreground="Black" VerticalAlignment="Top" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink" FontSize="40"/>
+        <TextBlock x:Name="scoreNgelowongText" HorizontalAlignment="Left" Margin="488,405,0,0" TextWrapping="Wrap" Text="0" Foreground="Black" FontSize="36" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="240,350,0,0" TextWrapping="Wrap" Text="Tahap 3 - Medeli" VerticalAlignment="Top" Width="231" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink" FontSize="45" Foreground="Black" Height="38"/>
     </Grid>
 
 </phone:PhoneApplicationPage>

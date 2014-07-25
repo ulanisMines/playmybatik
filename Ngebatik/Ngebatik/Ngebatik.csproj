@@ -99,6 +99,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="KontenAlatBatik.xaml.cs">
+      <DependentUpon>KontenAlatBatik.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Drawing.cs" />
     <Compile Include="FinishNgelorod.xaml.cs">
       <DependentUpon>FinishNgelorod.xaml</DependentUpon>
@@ -171,6 +174,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="KontenAlatBatik.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="FinishNgelorod.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -244,14 +251,12 @@
     <Content Include="Asset\BatikCorak.png" />
     <Content Include="Asset\BatikCoraks.png" />
     <Content Include="Asset\button\buttongy.png" />
+    <Content Include="Asset\button\ceklis fix.png" />
     <Content Include="Asset\button\easy.png" />
     <Content Include="Asset\button\hard.png" />
     <Content Include="Asset\button\medium.png" />
     <Content Include="Asset\Fonts\elegant_ink.ttf" />
     <Content Include="Asset\Fonts\Museo300-Regular.otf" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="MainPage_MainPage.sequencediagram" />
     <Content Include="Asset\in game screen larger.png" />
     <Content Include="Asset\new logos.png" />
     <Content Include="Properties\AppManifest.xml" />
@@ -305,11 +310,6 @@
       <HintPath>I:\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MainPage_MainPage.sequencediagram.layout">
-      <DependentUpon>MainPage_MainPage.sequencediagram</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

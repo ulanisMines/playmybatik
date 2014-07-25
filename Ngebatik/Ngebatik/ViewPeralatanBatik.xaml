@@ -34,8 +34,16 @@
         <Button Content="Malam(Lilin)" HorizontalAlignment="Left" Margin="540,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Button Content="Dhingklik" HorizontalAlignment="Left" Margin="404,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Button Content="Pewarna Alami" HorizontalAlignment="Left" Margin="131,320,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Grid x:Name="KontenBatik" Height="239" Margin="126,166,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="605" Visibility="Collapsed">
+            <Image x:Name="ImageAlatBatik" HorizontalAlignment="Left" Height="239" VerticalAlignment="Top" Width="239"/>
+            <TextBox x:Name="TextAlatBatik" HorizontalAlignment="Left" Height="239" Margin="239,-0.226,-6.254,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372.254" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox.RenderTransform>
+                    <CompositeTransform SkewY="-0.526" TranslateY="-1.483"/>
+                </TextBox.RenderTransform>
+            </TextBox>
 
-        <!--TitlePanel contains the name of the application and page title-->
+        </Grid>
+    <!--TitlePanel contains the name of the application and page title-->
        
 
         <!--ContentPanel - place additional content here-->

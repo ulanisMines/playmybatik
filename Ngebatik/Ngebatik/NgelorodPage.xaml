@@ -43,7 +43,7 @@
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
-        <Canvas x:Name="canvasGambarBatik" Height="326" VerticalAlignment="Top" Width="521" Margin="140,0,139,0" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="canvasGambarBatik" Height="326" VerticalAlignment="Top" Width="521" Margin="208,10,71,0" RenderTransformOrigin="0.5,0.5">
         	<Canvas.RenderTransform>
         		<CompositeTransform/>
         	</Canvas.RenderTransform>
@@ -51,37 +51,44 @@
         <Grid HorizontalAlignment="Left" Height="92" Margin="0,388,0,0" VerticalAlignment="Top" Width="800" Background="#FFD34A16">
             <StackPanel Orientation="Horizontal" Margin="50,11,0,0">
                 <Grid Width="74" Margin="0,2,0,-2">
-                    <Ellipse x:Name="Warna1El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap"/>
+                    <Ellipse x:Name="Warna1El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap" Visibility="Collapsed"/>
                 </Grid>
                 <Grid>
-                    <Ellipse x:Name="Warna2El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap"/>
+                    <Ellipse x:Name="Warna2El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap" Visibility="Collapsed"/>
                 </Grid>
                 <Grid>
-                    <Ellipse x:Name="Warna3El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap"/>
+                    <Ellipse x:Name="Warna3El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap" Visibility="Collapsed"/>
                     
                 </Grid>
                 <Grid>
-                    <Ellipse x:Name="Warna4El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap"/>
+                    <Ellipse x:Name="Warna4El" Stroke="Black" Width="74" Margin="0,0,0,10" Tap="Warna1El_OnTap" Visibility="Collapsed"/>
         
                 </Grid>
 
             </StackPanel>
             
-            <Button x:Name="btnselesai" Content="Selesai" HorizontalAlignment="Left" Margin="566,11,0,0" VerticalAlignment="Top" Width="204" Click="Button_Click_1"/>
+            <Button x:Name="btnselesai"  HorizontalAlignment="Left" Margin="630,0,0,0" VerticalAlignment="Top" Width="137" Click="Button_Click_1" Visibility="Collapsed" BorderThickness="0" Height="92">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Asset/button/ceklis fix.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
-        <Image x:Name="imageBatik" HorizontalAlignment="Center" Height="326" VerticalAlignment="Top" Width="521" Margin="140,-326,139,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
+        <Image x:Name="imageBatik" HorizontalAlignment="Center" Height="326" VerticalAlignment="Top" Width="521" Margin="208,-326,71,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
         	<Image.RenderTransform>
         		<CompositeTransform/>
         	</Image.RenderTransform>
         </Image>
-      <Image x:Name="panahImage" HorizontalAlignment="Left" Height="49" Margin="67,10,0,0" VerticalAlignment="Top" Width="51" Source="/Asset/panah bawah.png" ManipulationDelta="Pen_Drag" RenderTransformOrigin="0.444,0.507" Tap="panahImage_Tap" >
+      <Image x:Name="panahImage" HorizontalAlignment="Left" Height="43" Margin="60,45,0,0" VerticalAlignment="Top" Width="38" Source="/Asset/panah bawah.png" ManipulationDelta="Pen_Drag" RenderTransformOrigin="0.444,0.507" Tap="panahImage_Tap" >
             <Image.RenderTransform>
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
        
-        <TextBlock HorizontalAlignment="Left" Margin="722,94,0,0" TextWrapping="Wrap" Text="Score" Foreground="Black" VerticalAlignment="Top"/>
-        <TextBlock x:Name="scoreNgelowongText" HorizontalAlignment="Left" Margin="722,126,0,0" TextWrapping="Wrap" Text="0" Foreground="Black" FontSize="36" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="415,422,0,0" TextWrapping="Wrap" Text="Score" Foreground="Black" VerticalAlignment="Top"/>
+        <TextBlock x:Name="scoreNgelorodText" HorizontalAlignment="Left" Margin="505,405,0,0" TextWrapping="Wrap" Text="0" Foreground="Black" FontSize="36" VerticalAlignment="Top"/>
+        <TextBox x:Name="WaktuBermainText" Height="72" Margin="74,93,670,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="0.491,0.74"/>
+        <Image HorizontalAlignment="Left" Height="72" Margin="10,106,0,0" VerticalAlignment="Top" Width="64" Source="/Asset/button/button-clock.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="293,345,0,0" TextWrapping="Wrap" Text="Tahap 4 - Ngelorod" VerticalAlignment="Top" Width="231" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink" FontSize="45" Foreground="Black" Height="38"/>
     </Grid>
 
 </phone:PhoneApplicationPage>

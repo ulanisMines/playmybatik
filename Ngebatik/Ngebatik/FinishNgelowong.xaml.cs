@@ -29,7 +29,12 @@ namespace Ngebatik
             base.OnNavigatedTo(e);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        //private void Button_Click_1(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
+        private void TapNextNembok(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/NembokPage.xaml", UriKind.Relative));
         }

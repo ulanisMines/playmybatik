@@ -39,7 +39,7 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain = 60;
+        int waktubermain = 20;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
         public static int scoreNembok = 0;
@@ -76,6 +76,8 @@ namespace Ngebatik
                 detikBermain = 0;
                 ds.Stop();
                 btnselesai.Visibility = Visibility.Visible;
+                kuasBasah = false;
+                penBatik.Visibility = Visibility.Collapsed;
             }
 
         }
@@ -160,7 +162,7 @@ namespace Ngebatik
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            string msg;
+            //string msg;
 
 
 

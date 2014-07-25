@@ -32,11 +32,14 @@
                 <RowDefinition Height="33*"/>
                 <RowDefinition Height="127*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="ScoreNgelowongText" HorizontalAlignment="Left" Margin="408,105,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
-            <Button Content="Button" HorizontalAlignment="Left" Margin="324,252,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click_1"/>
+            <TextBlock x:Name="ScoreNgelowongText" HorizontalAlignment="Left" Margin="453,95,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
             <TextBlock HorizontalAlignment="Left" Margin="272,76,0,0" TextWrapping="Wrap" Text="SELAMAT" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="68" Foreground="Black" Grid.RowSpan="2"/>
-            <TextBlock HorizontalAlignment="Left" Margin="60,59,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Anda telah menyelesaikan tahap II- Nembok " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="30" Foreground="Black" Width="682" />
-            <TextBlock HorizontalAlignment="Left" Margin="205,100,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
+            <TextBlock HorizontalAlignment="Left" Margin="94,59,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Anda telah menyelesaikan tahap II- Nembok " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="30" Foreground="Black" Width="682" />
+            <TextBlock HorizontalAlignment="Left" Margin="245,95,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
+            <Grid x:Name="TapNextMedeli" HorizontalAlignment="Left" Height="100" Margin="352,201,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Tap="TapNextMedeli_Tap">
+                <Image HorizontalAlignment="Left" Margin="-10,-10,0,10" Width="100" Source="/Asset/button/button-play.png"/>
+                <TextBlock HorizontalAlignment="Left" Margin="-41,95,-18,-22" TextWrapping="Wrap" Text="Tahap 3 - Medeli" Foreground="Black" VerticalAlignment="Top" Width="159"/>
+            </Grid>
 
         </Grid>
     </Grid>

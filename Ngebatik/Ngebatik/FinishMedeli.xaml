@@ -32,13 +32,17 @@
                 <RowDefinition Height="33*"/>
                 <RowDefinition Height="127*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="ScoreNgelowongText" HorizontalAlignment="Left" Margin="408,105,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
-            <Button Content="Button" HorizontalAlignment="Left" Margin="324,252,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click_1"/>
+            <TextBlock x:Name="ScoreNgelowongText" HorizontalAlignment="Left" Margin="433,100,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
+            <Grid x:Name="NextNgelorod" Tap="TapNextNgelorod" >
+                <Image HorizontalAlignment="Left" Height="100" Margin="342,323,0,-324" VerticalAlignment="Top" Width="100" Source="/Asset/button/button-play.png"/>
+                <TextBlock HorizontalAlignment="Left" Margin="306,423,0,-351" TextWrapping="Wrap" Text="Tahap 4 - Ngelorod" VerticalAlignment="Top" Foreground="Black"/>
+            </Grid>
             <TextBlock HorizontalAlignment="Left" Margin="272,76,0,0" TextWrapping="Wrap" Text="SELAMAT" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="68" Foreground="Black" Grid.RowSpan="2"/>
-            <TextBlock HorizontalAlignment="Left" Margin="60,59,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Anda telah menyelesaikan tahap III- Medeli " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="30" Foreground="Black" Width="682" />
-            <TextBlock HorizontalAlignment="Left" Margin="205,100,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
-
+            <TextBlock HorizontalAlignment="Left" Margin="84,59,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Anda telah menyelesaikan tahap III- Medeli " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="30" Foreground="Black" Width="682" />
+            <TextBlock HorizontalAlignment="Left" Margin="241,100,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
+          
         </Grid>
+       
     </Grid>
 
 </phone:PhoneApplicationPage>

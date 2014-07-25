@@ -28,7 +28,7 @@ namespace Ngebatik
         const int width = 400;
         const int height = 280;
         WriteableBitmap wbEdited, wbHasilSobel;
-        BitmapImage bmpBatik;
+        //BitmapImage bmpBatik;
         //Kelas.Sobel sobelOperator = new Kelas.Sobel();
 
         double[] preXArray = new double[10];
@@ -39,10 +39,10 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain = 60;
+        int waktubermain = 20;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
-        public static int scoreMedeli;
+        public static int scoreMedeli=100;
         private Random _rand = new Random();
         private Boolean selectedcolor1;
 
@@ -122,7 +122,7 @@ namespace Ngebatik
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            string msg;
+            //string msg;
 
 
 
@@ -266,38 +266,9 @@ namespace Ngebatik
                 ((byte) (g * ai) << 8) | (byte) (b * ai);
         }
 
-        private void Pot_Tapped(object sender, Microsoft.Phone.Controls.GestureEventArgs e)
-        {
-            //if (!kuasBasah)
-            //{
-            //    Random rand = new Random();
-            //    waktuBasahKuas = rand.Next(7, 15);
-            //    kuasBasah = true;
-            //    dt.Start();
-            //}
-        }
+      
 
-        private void Pen_Drag(object sender, ManipulationDeltaEventArgs e)
-        {
-
-        }
-
-        private void Panah_Tapped(object sender, Microsoft.Phone.Controls.GestureEventArgs e)
-        {
-            //if (!lihatBatikAsli)
-            //{
-            //    SetPanahKeatas();
-            //    SlideDownBatik_Animated.Begin();
-            //    lihatBatikAsli = true;
-            //}
-            //else
-            //{
-            //    SetPanahKebawah();
-            //    BatikSlideUp_Animated.Begin();
-            //    lihatBatikAsli = false;
-            //}
-        }
-
+      
         private void panahImage_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
 

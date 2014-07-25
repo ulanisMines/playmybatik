@@ -39,7 +39,7 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain=60;
+        int waktubermain=20;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
        public static int scoreNyorek=0;
@@ -76,6 +76,9 @@ namespace Ngebatik
                 detikBermain = 0;
                 ds.Stop();
                 btnselesai.Visibility = Visibility.Visible;
+                kuasBasah = false;
+                penBatik.Visibility = Visibility.Collapsed;
+
             }
 
         }
@@ -158,7 +161,7 @@ namespace Ngebatik
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-          string msg;
+          //string msg;
           
             //if (NavigationContext.QueryString.TryGetValue("gambar", out msg))
             //{
@@ -236,7 +239,7 @@ namespace Ngebatik
 
         public void LoadURL()
         {
-            MessageBox.Show("LoadURL"+Helper.BASE + "getfilosofi.php?GambarBatik=" + Helper.GambarBatik);
+           // MessageBox.Show("LoadURL"+Helper.BASE + "getfilosofi.php?GambarBatik=" + Helper.GambarBatik);
 
             WebClient wcSoalBatik = new WebClient();
             wcSoalBatik.DownloadStringCompleted += new DownloadStringCompletedEventHandler(DownloadFilosofiBatik);
@@ -245,7 +248,7 @@ namespace Ngebatik
           private void DownloadFilosofiBatik(object sender, DownloadStringCompletedEventArgs e)
         {
 
-            MessageBox.Show(e.Result);
+            //MessageBox.Show(e.Result);
             JObject jRoot = JObject.Parse(e.Result);
             JArray jItem = JArray.Parse(jRoot.SelectToken("result").ToString());
             getfilosofi gf = new getfilosofi();
@@ -375,6 +378,7 @@ namespace Ngebatik
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
             Touch.FrameReported -= new TouchFrameEventHandler(Touch_FrameReported);
 
             var hasilNgelowong2 = canvasGambarBatik.Children.OfType<Line>().ToList();

@@ -29,7 +29,9 @@ namespace Ngebatik
             base.OnNavigatedTo(e);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+      
+
+        private void TapNextNgelorod(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/NgelorodPage.xaml", UriKind.Relative));
         }

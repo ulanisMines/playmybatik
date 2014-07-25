@@ -29,7 +29,9 @@ namespace Ngebatik
             base.OnNavigatedTo(e);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+       
+
+        private void TapNextMedeli_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/MedeliPage.xaml", UriKind.Relative));
         }
