@@ -16,6 +16,7 @@ using System.Threading;
 using Ngebatik.Kelas;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
+using Microsoft.Phone.BackgroundAudio;
 using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 
@@ -39,13 +40,15 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain=20;
+        int waktubermain=60;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
-       public static int scoreNyorek=0;
+        public static int scoreNyorek=0;
         private Random _rand = new Random();
 
         private Brush selectedColor = new SolidColorBrush(Colors.Black);
+        MediaElement backsoundButton = new MediaElement();
+        MediaElement backsoundgame = new MediaElement();
 
 
         public NyorekPage()
@@ -57,8 +60,12 @@ namespace Ngebatik
                 Touch.FrameReported += new TouchFrameEventHandler(Touch_FrameReported);
                 dt.Interval = TimeSpan.FromSeconds(1);
                 ds.Interval = TimeSpan.FromSeconds(1);
-                dt.Tick += dt_Tick;
-                ds.Tick +=ds_Tick;
+                //dt.Tick += dt_Tick;
+                //ds.Tick +=ds_Tick;
+                this.LayoutRoot.Children.Add(backsoundButton);
+
+                backsoundButton.CurrentStateChanged += BacksoundButtonCurrentStateChanged;
+                backsoundButton.MediaEnded += BacksoundButton_MediaEnded;
             }
             catch (Exception e)
             {
@@ -66,10 +73,45 @@ namespace Ngebatik
             }
         }
 
+        private void BacksoundButtonCurrentStateChanged(object sender, RoutedEventArgs e)
+        {
+            switch (backsoundButton.CurrentState)
+            {
+                case System.Windows.Media.MediaElementState.AcquiringLicense:
+                    break;
+                case System.Windows.Media.MediaElementState.Buffering:
+                    break;
+                case System.Windows.Media.MediaElementState.Closed:
+                    break;
+                case System.Windows.Media.MediaElementState.Individualizing:
+                    break;
+                case System.Windows.Media.MediaElementState.Opening:
+                    break;
+                case System.Windows.Media.MediaElementState.Paused:
+                    break;
+                case System.Windows.Media.MediaElementState.Playing:
+                    break;
+                case System.Windows.Media.MediaElementState.Stopped:
+                    break;
+                default:
+                    break;
+            }
+
+            System.Diagnostics.Debug.WriteLine("CurrentState event " + backsoundButton.CurrentState.ToString());
+        }
+
+        private void BacksoundButton_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Ended event " + backsoundButton.CurrentState.ToString());
+            // Set the source to null, force a Close event in current state
+            backsoundButton.Source = null;
+        }
+
+
         private void ds_Tick(object sender, EventArgs e)
         {
             detikBermain++;
-            WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
+            //WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
             ds.Start();
             if (waktubermain == detikBermain)
             {
@@ -95,20 +137,18 @@ namespace Ngebatik
             this.panahImage.Source = bmp;
         }
 
-        
-        private void dt_Tick(object sender, EventArgs e)
-        {
-            detikCanting++;  
-                waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
-                if (detikCanting == waktuBasahKuas)
-                {
-                    detikCanting = 0;
-                    kuasBasah = false;
-                    dt.Stop();
-                }
 
-             
-        }
+        ////private void dt_tick(object sender, eventargs e)
+        //{
+            //detikcanting++;
+        //    waktubasahkuastext.text = (waktubasahkuas - detikcanting).tostring();
+        //    if (detikcanting == waktubasahkuas)
+        //    {
+        //        detikcanting = 0;
+        //        kuasbasah = false;
+        //        dt.stop();
+        //    }
+        //}
 
         private void Touch_FrameReported(object sender, TouchFrameEventArgs e)
         {
@@ -161,6 +201,9 @@ namespace Ngebatik
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
+
+            backsoundButton.Source = new Uri("Audio/BacksoundGameplay.mp3", UriKind.RelativeOrAbsolute);
+            backsoundButton.Play();
           //string msg;
           
             //if (NavigationContext.QueryString.TryGetValue("gambar", out msg))
@@ -245,75 +288,86 @@ namespace Ngebatik
             wcSoalBatik.DownloadStringCompleted += new DownloadStringCompletedEventHandler(DownloadFilosofiBatik);
             wcSoalBatik.DownloadStringAsync(new Uri(Helper.BASE + "getfilosofi.php?GambarBatik=" + Helper.GambarBatik));
         }
-          private void DownloadFilosofiBatik(object sender, DownloadStringCompletedEventArgs e)
+        private void DownloadFilosofiBatik(object sender, DownloadStringCompletedEventArgs e)
         {
+            try
+            {
+                //MessageBox.Show(e.Result);
+                JObject jRoot = JObject.Parse(e.Result);
+                JArray jItem = JArray.Parse(jRoot.SelectToken("result").ToString());
+                getfilosofi gf = new getfilosofi();
+                foreach (JObject item in jItem)
+                {
+                    gf.idBatik = item.SelectToken("idBatik").ToString();
+                    gf.NamaBatik = item.SelectToken("NamaBatik").ToString();
+                    gf.GambarBatik = Helper.img_BASE + item.SelectToken("GambarBatik").ToString();
+                    gf.Filosofi = item.SelectToken("Filosofi").ToString();
+                    gf.idDaerah = item.SelectToken("idDaerah").ToString();
+                    gf.idJenis = item.SelectToken("idJenis").ToString();
+                    gf.Warna1 = item.SelectToken("Warna1").ToString();
+                    gf.Warna2 = item.SelectToken("Warna2").ToString();
+                    gf.Warna3 = item.SelectToken("Warna3").ToString();
+                    gf.Warna4 = item.SelectToken("Warna4").ToString();
 
-            //MessageBox.Show(e.Result);
-            JObject jRoot = JObject.Parse(e.Result);
-            JArray jItem = JArray.Parse(jRoot.SelectToken("result").ToString());
-            getfilosofi gf = new getfilosofi();
-            foreach (JObject item in jItem)
-            {
-                gf.idBatik = item.SelectToken("idBatik").ToString();
-                gf.NamaBatik = item.SelectToken("NamaBatik").ToString();
-                gf.GambarBatik = Helper.img_BASE + item.SelectToken("GambarBatik").ToString();
-                gf.Filosofi = item.SelectToken("Filosofi").ToString();
-                gf.idDaerah = item.SelectToken("idDaerah").ToString();
-                gf.idJenis = item.SelectToken("idJenis").ToString();
-                gf.Warna1 = item.SelectToken("Warna1").ToString();
-                gf.Warna2 = item.SelectToken("Warna2").ToString();
-                gf.Warna3 = item.SelectToken("Warna3").ToString();
-                gf.Warna4 = item.SelectToken("Warna4").ToString();
 
-            
-            }
-           
-             Helper.hasilDownload = gf;
-            if (gf.Warna1 == null || !gf.Warna1.StartsWith("#"))
-            {
-                Warna1El.Visibility = Visibility.Collapsed;
-                // Warna1.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                String strColour =gf.Warna1;
-                Color myColour = ConvertHexStringToColour(strColour);
-                Warna1El.Fill = new SolidColorBrush(myColour);
-             }
+                }
 
-            if (gf.Warna2 == null || !gf.Warna2.StartsWith("#"))
-            {
-                Warna2El.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                String strColour = gf.Warna2;
-                Color myColour = ConvertHexStringToColour(strColour);
-                Warna2El.Fill = new SolidColorBrush(myColour);
-            }
+                Helper.hasilDownload = gf;
+                if (gf.Warna1 == null || !gf.Warna1.StartsWith("#"))
+                {
+                    Warna1El.Visibility = Visibility.Collapsed;
+                    // Warna1.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    String strColour = gf.Warna1;
+                    Color myColour = ConvertHexStringToColour(strColour);
+                    Warna1El.Fill = new SolidColorBrush(myColour);
+                }
 
-            if (gf.Warna3 == null || !gf.Warna3.StartsWith("#"))
-            {
-                Warna3El.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                String strColour = gf.Warna3;
-                Color myColour = ConvertHexStringToColour(strColour);
-                Warna3El.Fill = new SolidColorBrush(myColour);
-            }
+                if (gf.Warna2 == null || !gf.Warna2.StartsWith("#"))
+                {
+                    Warna2El.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    String strColour = gf.Warna2;
+                    Color myColour = ConvertHexStringToColour(strColour);
+                    Warna2El.Fill = new SolidColorBrush(myColour);
+                }
 
-            if (gf.Warna4 == null || !gf.Warna4.StartsWith("#"))
-            {
-                Warna4El.Visibility = Visibility.Collapsed;
+                if (gf.Warna3 == null || !gf.Warna3.StartsWith("#"))
+                {
+                    Warna3El.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    String strColour = gf.Warna3;
+                    Color myColour = ConvertHexStringToColour(strColour);
+                    Warna3El.Fill = new SolidColorBrush(myColour);
+                }
+
+                if (gf.Warna4 == null || !gf.Warna4.StartsWith("#"))
+                {
+                    Warna4El.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    String strColour = gf.Warna4;
+                    Color myColour = ConvertHexStringToColour(strColour);
+                    Warna4El.Fill = new SolidColorBrush(myColour);
+                }
             }
-            else
+            catch(TimeoutException)
             {
-                String strColour = gf.Warna4;
-                Color myColour = ConvertHexStringToColour(strColour);
-                Warna4El.Fill = new SolidColorBrush(myColour);
+                MessageBox.Show("Tidak ada koneksi internet");
+
             }
         }
+            
+        
+        
+        
         public void SetPikselCitra(int x, int y, byte alpha, int r, int g, int b)
         {
             float ai = alpha * PreMultiplyFactor;
@@ -410,6 +464,8 @@ namespace Ngebatik
                 {
                     dt.Start();
                 }
+
+
             
         }
     }

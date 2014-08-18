@@ -16,6 +16,7 @@ using System.Threading;
 using Ngebatik.Kelas;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
+using Microsoft.Phone.BackgroundAudio;
 using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 
@@ -23,12 +24,15 @@ namespace Ngebatik
 {
     public partial class NembokPage : PhoneApplicationPage
     {
+        MediaElement backsoundButton = new MediaElement();
+        MediaElement backsoundgame = new MediaElement();
         private const float PreMultiplyFactor = 1 / 255f;
         private bool isFirstTap;
         const int width = 400;
         const int height = 280;
         WriteableBitmap wbEdited, wbHasilSobel;
         BitmapImage bmpBatik;
+
         //Kelas.Sobel sobelOperator = new Kelas.Sobel();
 
         double[] preXArray = new double[10];
@@ -39,7 +43,7 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain = 20;
+        int waktubermain = 60;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
         public static int scoreNembok = 0;
@@ -55,10 +59,14 @@ namespace Ngebatik
             {
                 InitializeComponent();
                 Touch.FrameReported += new TouchFrameEventHandler(Touch_FrameReported);
-                dt.Interval = TimeSpan.FromSeconds(1);
-                ds.Interval = TimeSpan.FromSeconds(1);
-                dt.Tick += dt_Tick;
-                ds.Tick += ds_Tick;
+                //dt.Interval = TimeSpan.FromSeconds(1);
+                //ds.Interval = TimeSpan.FromSeconds(1);
+                //dt.Tick += dt_Tick;
+                //ds.Tick += ds_Tick;
+                this.LayoutRoot.Children.Add(backsoundButton);
+
+                backsoundButton.CurrentStateChanged += BacksoundButtonCurrentStateChanged;
+                backsoundButton.MediaEnded += BacksoundButton_MediaEnded;
             }
             catch (Exception e)
             {
@@ -66,21 +74,55 @@ namespace Ngebatik
             }
         }
 
-        private void ds_Tick(object sender, EventArgs e)
+        private void BacksoundButtonCurrentStateChanged(object sender, RoutedEventArgs e)
         {
-            detikBermain++;
-            WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
-            ds.Start();
-            if (waktubermain == detikBermain)
+            switch (backsoundButton.CurrentState)
             {
-                detikBermain = 0;
-                ds.Stop();
-                btnselesai.Visibility = Visibility.Visible;
-                kuasBasah = false;
-                penBatik.Visibility = Visibility.Collapsed;
+                case System.Windows.Media.MediaElementState.AcquiringLicense:
+                    break;
+                case System.Windows.Media.MediaElementState.Buffering:
+                    break;
+                case System.Windows.Media.MediaElementState.Closed:
+                    break;
+                case System.Windows.Media.MediaElementState.Individualizing:
+                    break;
+                case System.Windows.Media.MediaElementState.Opening:
+                    break;
+                case System.Windows.Media.MediaElementState.Paused:
+                    break;
+                case System.Windows.Media.MediaElementState.Playing:
+                    break;
+                case System.Windows.Media.MediaElementState.Stopped:
+                    break;
+                default:
+                    break;
             }
 
+            System.Diagnostics.Debug.WriteLine("CurrentState event " + backsoundButton.CurrentState.ToString());
         }
+
+        private void BacksoundButton_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Ended event " + backsoundButton.CurrentState.ToString());
+            // Set the source to null, force a Close event in current state
+            backsoundButton.Source = null;
+        }
+
+        //private void ds_Tick(object sender, EventArgs e)
+        //{
+        //    detikBermain++;
+        //    WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
+        //    ds.Start();
+        //    if (waktubermain == detikBermain)
+        //    {
+        //        detikBermain = 0;
+        //        ds.Stop();
+        //        btnselesai.Visibility = Visibility.Visible;
+        //        kuasBasah = false;
+        //        penBatik.Visibility = Visibility.Collapsed;
+        //    }
+
+        //}
 
         private void SetPanahKebawah()
         {
@@ -95,19 +137,17 @@ namespace Ngebatik
         }
 
 
-        private void dt_Tick(object sender, EventArgs e)
-        {
-            detikCanting++;
-            waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
-            if (detikCanting == waktuBasahKuas)
-            {
-                detikCanting = 0;
-                kuasBasah = false;
-                dt.Stop();
-            }
-
-
-        }
+        //private void dt_Tick(object sender, EventArgs e)
+        //{
+        //    detikCanting++;
+        //    waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
+        //    if (detikCanting == waktuBasahKuas)
+        //    {
+        //        detikCanting = 0;
+        //        kuasBasah = false;
+        //        dt.Stop();
+        //    }
+        //            }
 
         private void Touch_FrameReported(object sender, TouchFrameEventArgs e)
         {
@@ -163,7 +203,8 @@ namespace Ngebatik
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             //string msg;
-
+            backsoundButton.Source = new Uri("Audio/BacksoundGameplay2.mp3", UriKind.RelativeOrAbsolute);
+            backsoundButton.Play();
 
 
             try

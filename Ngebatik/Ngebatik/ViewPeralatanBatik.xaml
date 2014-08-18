@@ -23,27 +23,66 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="262,74,0,0" Grid.Row="1" TextWrapping="Wrap" FontSize="65" Text="Peralatan Membatik" Foreground="Black" VerticalAlignment="Top" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink"/>
-        <Button x:Name="PrGawangan" Content="Gawangan" HorizontalAlignment="Left" Margin="131,166,0,0" Grid.Row="1" VerticalAlignment="Top" Click="PrGawangan_Click"/>
-        <Button Content="Bandul" HorizontalAlignment="Left" Margin="535,243,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Wajan" HorizontalAlignment="Left" Margin="290,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Kompor" HorizontalAlignment="Left" Margin="182,238,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Taplak" HorizontalAlignment="Left" Margin="320,243,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Saringan Malam" HorizontalAlignment="Left" Margin="339,320,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Canting" HorizontalAlignment="Left" Margin="557,320,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Mori" HorizontalAlignment="Left" Margin="436,243,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Malam(Lilin)" HorizontalAlignment="Left" Margin="540,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Dhingklik" HorizontalAlignment="Left" Margin="404,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Pewarna Alami" HorizontalAlignment="Left" Margin="131,320,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Grid x:Name="KontenBatik" Height="239" Margin="126,166,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="605" Visibility="Collapsed">
-            <Image x:Name="ImageAlatBatik" HorizontalAlignment="Left" Height="239" VerticalAlignment="Top" Width="239"/>
-            <TextBox x:Name="TextAlatBatik" HorizontalAlignment="Left" Height="239" Margin="239,-0.226,-6.254,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372.254" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <TextBox.RenderTransform>
-                    <CompositeTransform SkewY="-0.526" TranslateY="-1.483"/>
-                </TextBox.RenderTransform>
-            </TextBox>
+        <Button x:Name="PrGawangan" HorizontalAlignment="Left" Margin="111,166,0,0" Grid.Row="1" VerticalAlignment="Top" Click="PrGawangan_Click" Height="77" Width="174" BorderThickness="0" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Gawangan">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/Asset/button/buttongy.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="535,238,0,0" Grid.Row="1" VerticalAlignment="Top" BorderThickness="0" Width="149" Height="77" Click="Bandul_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Bandul">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="285,166,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Wajan_Clik" BorderThickness="0" Height="75" Width="119" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Wajan">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/Asset/button/buttongy.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="160,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" BorderThickness="0" Height="77" Click="Kompor_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Kompor">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="299,238,0,0" Grid.Row="1" VerticalAlignment="Top" BorderThickness="0" Width="121" Height="77" Click="Taplak_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Taplak">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="299,315,0,0" Grid.Row="1" VerticalAlignment="Top" Width="231" BorderThickness="0" Height="82" Click="SaringanMalam_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Saringan Malam">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="552,167,0,0" Grid.Row="1" VerticalAlignment="Top" BorderThickness="0" Width="132" Height="76" Click="Canting_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Canting">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="409,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" Height="77" BorderThickness="0" Click="Mori_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Mori">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="516,315,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180" Height="82" BorderThickness="0" Click="Malam_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Malam">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="396.006,165,0,0" Grid.Row="1" VerticalAlignment="Top" BorderThickness="0" Width="165" Height="78" Click="Dhingklik_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Dhingklik" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Button.RenderTransform>
+                <CompositeTransform SkewX="-0.725" TranslateX="0.487"/>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="103,315,0,0" Grid.Row="1" VerticalAlignment="Top" Height="82" Width="212" BorderThickness="0" Click="PewarnaAlami_Click" FontFamily="Asset/Fonts/Museo300-Regular.otf#Museo 300" Foreground="Black" Content="Pewarna Alami">
+            <Button.Background>
+                <ImageBrush ImageSource="/Asset/button/buttongy.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
 
-        </Grid>
-    <!--TitlePanel contains the name of the application and page title-->
+        <!--TitlePanel contains the name of the application and page title-->
        
 
         <!--ContentPanel - place additional content here-->

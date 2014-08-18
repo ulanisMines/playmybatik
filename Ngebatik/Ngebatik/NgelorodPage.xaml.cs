@@ -16,6 +16,7 @@ using System.Threading;
 using Ngebatik.Kelas;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
+using Microsoft.Phone.BackgroundAudio;
 using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 
@@ -36,8 +37,8 @@ namespace Ngebatik
 
         DispatcherTimer dt = new DispatcherTimer();
         DispatcherTimer ds = new DispatcherTimer();
-        int detikCanting = 0;
-        int detikBermain = 0;
+      //  int detikCanting = 0;
+        //int detikBermain = 0;
         int waktuBasahKuas;
         int waktubermain = 10;
         Boolean kuasBasah = false;
@@ -47,7 +48,8 @@ namespace Ngebatik
         private Boolean selectedcolor1;
 
         private Brush selectedColor = new SolidColorBrush(Colors.Black);
-
+        MediaElement backsoundButton = new MediaElement();
+       
 
         public NgelorodPage()
         {
@@ -56,10 +58,15 @@ namespace Ngebatik
             {
                 InitializeComponent();
                 Touch.FrameReported += new TouchFrameEventHandler(Touch_FrameReported);
-                dt.Interval = TimeSpan.FromSeconds(1);
-                ds.Interval = TimeSpan.FromSeconds(1);
-                dt.Tick += dt_Tick;
-                ds.Tick += ds_Tick;
+                //dt.Interval = TimeSpan.FromSeconds(1);
+                //ds.Interval = TimeSpan.FromSeconds(1);
+                //dt.Tick += dt_Tick;
+                //ds.Tick += ds_Tick;
+                this.LayoutRoot.Children.Add(backsoundButton);
+
+                backsoundButton.CurrentStateChanged += BacksoundButtonCurrentStateChanged;
+                backsoundButton.MediaEnded += BacksoundButton_MediaEnded;
+
             }
             catch (Exception e)
             {
@@ -67,20 +74,55 @@ namespace Ngebatik
             }
         }
 
-        private void ds_Tick(object sender, EventArgs e)
+        private void BacksoundButtonCurrentStateChanged(object sender, RoutedEventArgs e)
         {
-            detikBermain++;
-             WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
-            ds.Start();
-            if (waktubermain == detikBermain)
+            switch (backsoundButton.CurrentState)
             {
-                detikBermain = 0;
-                ds.Stop();
-                btnselesai.Visibility = Visibility.Visible;
-              
+                case System.Windows.Media.MediaElementState.AcquiringLicense:
+                    break;
+                case System.Windows.Media.MediaElementState.Buffering:
+                    break;
+                case System.Windows.Media.MediaElementState.Closed:
+                    break;
+                case System.Windows.Media.MediaElementState.Individualizing:
+                    break;
+                case System.Windows.Media.MediaElementState.Opening:
+                    break;
+                case System.Windows.Media.MediaElementState.Paused:
+                    break;
+                case System.Windows.Media.MediaElementState.Playing:
+                    break;
+                case System.Windows.Media.MediaElementState.Stopped:
+                    break;
+                default:
+                    break;
             }
 
+            System.Diagnostics.Debug.WriteLine("CurrentState event " + backsoundButton.CurrentState.ToString());
         }
+
+        private void BacksoundButton_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Ended event " + backsoundButton.CurrentState.ToString());
+            // Set the source to null, force a Close event in current state
+            backsoundButton.Source = null;
+        }
+
+
+        //private void ds_Tick(object sender, EventArgs e)
+        //{
+        //    detikBermain++;
+        //     //WaktuBermainText.Text = (waktubermain - detikBermain).ToString();
+        //    ds.Start();
+        //    if (waktubermain == detikBermain)
+        //    {
+        //        detikBermain = 0;
+        //        ds.Stop();
+        //        btnselesai.Visibility = Visibility.Visible;
+              
+        //    }
+
+        //}
 
         private void SetPanahKebawah()
         {
@@ -95,19 +137,19 @@ namespace Ngebatik
         }
 
 
-        private void dt_Tick(object sender, EventArgs e)
-        {
-            detikCanting++;
-            //waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
-            if (detikCanting == waktuBasahKuas)
-            {
-                detikCanting = 0;
-                kuasBasah = false;
-                dt.Stop();
-            }
+        //private void dt_Tick(object sender, EventArgs e)
+        //{
+        //    detikCanting++;
+        //    //waktuBasahKuasText.Text = (waktuBasahKuas - detikCanting).ToString();
+        //    if (detikCanting == waktuBasahKuas)
+        //    {
+        //        detikCanting = 0;
+        //        kuasBasah = false;
+        //        dt.Stop();
+        //    }
 
 
-        }
+        //}
 
         private void Touch_FrameReported(object sender, TouchFrameEventArgs e)
         {
@@ -123,6 +165,8 @@ namespace Ngebatik
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
+            backsoundButton.Source = new Uri("Audio/BacksoundGameplay2.mp3", UriKind.RelativeOrAbsolute);
+            backsoundButton.Play();
             //string msg;
 
 
@@ -130,33 +174,33 @@ namespace Ngebatik
             try
             {
                 BitmapImage bitmapGet = Navigation.Bmp;
-                //PhoneApplicationService.Current.State["imageBatik"] as BitmapImage;
-                System.Windows.Media.Imaging.WriteableBitmap wb = new System.Windows.Media.Imaging.WriteableBitmap(bitmapGet);
-                wbEdited = new System.Windows.Media.Imaging.WriteableBitmap(width, height);
-                wbHasilSobel = new System.Windows.Media.Imaging.WriteableBitmap(width, height);
-                int[] rgb = wb.Pixels;
-                int grayScale, a, r, g, b;
+                ////PhoneApplicationService.Current.State["imageBatik"] as BitmapImage;
+                //System.Windows.Media.Imaging.WriteableBitmap wb = new System.Windows.Media.Imaging.WriteableBitmap(bitmapGet);
+                //wbEdited = new System.Windows.Media.Imaging.WriteableBitmap(width, height);
+                //wbHasilSobel = new System.Windows.Media.Imaging.WriteableBitmap(width, height);
+                //int[] rgb = wb.Pixels;
+                //int grayScale, a, r, g, b;
 
-                for (int y = 0; y < height; y++)
-                {
-                    for (int x = 0; x < width; x++)
-                    {
-                        a = rgb[(y * width) + x] >> 24;
-                        r = (rgb[(y * width) + x] & 0x00ff0000) >> 16;
-                        g = (rgb[(y * width) + x] & 0x0000ff00) >> 8;
-                        b = (rgb[(y * width) + x] & 0x000000ff);
+                //for (int y = 0; y < height; y++)
+                //{
+                //    for (int x = 0; x < width; x++)
+                //    {
+                //        a = rgb[(y * width) + x] >> 24;
+                //        r = (rgb[(y * width) + x] & 0x00ff0000) >> 16;
+                //        g = (rgb[(y * width) + x] & 0x0000ff00) >> 8;
+                //        b = (rgb[(y * width) + x] & 0x000000ff);
 
-                        grayScale = (r + g + b) / 3;
+                //        grayScale = (r + g + b) / 3;
 
-                        SetPikselCitra(x, y, (byte) a, grayScale, grayScale, grayScale);
-                    }
-                }
+                //        SetPikselCitra(x, y, (byte) a, grayScale, grayScale, grayScale);
+                //    }
+                //}
 
-                Kelas.Sobel sobelOperator = new Kelas.Sobel();
-                wbHasilSobel = sobelOperator.CitraSobel(wbEdited);
+                //Kelas.Sobel sobelOperator = new Kelas.Sobel();
+                //wbHasilSobel = sobelOperator.CitraSobel(wbEdited);
 
-                imagePolaBatik.Source = wbHasilSobel;
-                this.imageBatik.Source = bitmapGet;
+                //imagePolaBatik.Source = wbHasilSobel;
+                //this.imageBatik.Source = bitmapGet;
 
                 LoadURL();
 
@@ -167,6 +211,11 @@ namespace Ngebatik
             {
                 MessageBox.Show("Nyorek" + ez.Message);
             }
+            Rectangle rect = new Rectangle();
+            rect.Height = 326;
+            rect.Width = 521;
+            rect.Fill = Helper.selectedColor;
+            canvasGambarBatik.Children.Add(rect);
 
             foreach (Line oldLine in Helper.hasilNembok)
             {
@@ -185,6 +234,8 @@ namespace Ngebatik
             base.OnNavigatedTo(e);
         }
 
+        
+           
         private Color ConvertHexStringToColour(string hexString)
         {
             byte a = 0xff;
@@ -267,38 +318,12 @@ namespace Ngebatik
                 ((byte) (g * ai) << 8) | (byte) (b * ai);
         }
 
-        private void Pot_Tapped(object sender, Microsoft.Phone.Controls.GestureEventArgs e)
-        {
-            //if (!kuasBasah)
-            //{
-            //    Random rand = new Random();
-            //    waktuBasahKuas = rand.Next(7, 15);
-            //    kuasBasah = true;
-            //    dt.Start();
-            //}
-        }
-
         private void Pen_Drag(object sender, ManipulationDeltaEventArgs e)
         {
 
         }
 
-        private void Panah_Tapped(object sender, Microsoft.Phone.Controls.GestureEventArgs e)
-        {
-            //if (!lihatBatikAsli)
-            //{
-            //    SetPanahKeatas();
-            //    SlideDownBatik_Animated.Begin();
-            //    lihatBatikAsli = true;
-            //}
-            //else
-            //{
-            //    SetPanahKebawah();
-            //    BatikSlideUp_Animated.Begin();
-            //    lihatBatikAsli = false;
-            //}
-        }
-
+       
         private void panahImage_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
 
@@ -324,9 +349,12 @@ namespace Ngebatik
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/FinishNgelorod.xaml?score=" + score, UriKind.Relative));
+            
+            Helper.wbGambarBatik = new WriteableBitmap(canvasGambarBatik, null);
+            NavigationService.Navigate(new Uri("/FinishNgelorod.xaml?"+score, UriKind.Relative));
             btnselesai.Visibility = Visibility.Collapsed;
         }
+
 
         private void Warna1El_OnTap(object sender, GestureEventArgs e)
         {
@@ -342,7 +370,7 @@ namespace Ngebatik
             waktuBasahKuas = _rand.Next(7, 15);
             kuasBasah = true;
 
-            detikCanting = 0;
+            //detikCanting = 0;
 
             if (!dt.IsEnabled)
             {
@@ -351,9 +379,6 @@ namespace Ngebatik
 
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
+      
     }
 }

@@ -33,15 +33,16 @@
                 <RowDefinition Height="127*"/>
             </Grid.RowDefinitions>
             <TextBlock x:Name="ScoreAllGameText" HorizontalAlignment="Left" Margin="408,105,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
-           
-            <TextBlock HorizontalAlignment="Left" Margin="272,76,0,0" TextWrapping="Wrap" Text="SELAMAT" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="68" Foreground="Black" Grid.RowSpan="2"/>
+              <TextBlock HorizontalAlignment="Left" Margin="272,76,0,0" TextWrapping="Wrap" Text="SELAMAT" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="68" Foreground="Black" Grid.RowSpan="2"/>
             <TextBlock HorizontalAlignment="Left" Margin="60,59,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Anda telah menyelesaikan 4 Tahapan Membatik" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="30" Foreground="Black" Width="682" />
             <TextBlock HorizontalAlignment="Left" Margin="205,100,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Score  : " VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="60" Foreground="Black" />
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="30" Foreground="Black" />
+            <TextBlock x:Name="HasilPattern" HorizontalAlignment="Left" Margin="185,182,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="362" FontFamily="/Asset/Fonts/Museo300-regular.o#Museo 300" FontSize="30" Foreground="Black" />
 
         </Grid>
         <Grid HorizontalAlignment="Left" Height="100" Margin="352,201,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
-            <Image x:Name="TapNextNglorod" Margin="-10,95,0,-135" Width="100" Source="/Asset/button/button-play.png" Tap="TapNextNglorod_Tap"/>
-            <TextBlock Margin="-10,208,-18,-135" TextWrapping="Wrap" Text="Menu Utama" Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Width="128"/>
+            <Image x:Name="TapNextNglorod" Margin="98,119,-98,-159" Width="100" Source="/Asset/button/button-play.png" Tap="TapNextNglorod_Tap"/>
+            <TextBlock Margin="0,232,-98,-159" TextWrapping="Wrap" Text="Menu Utama" Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Width="128"/>
         </Grid>
     </Grid>
 

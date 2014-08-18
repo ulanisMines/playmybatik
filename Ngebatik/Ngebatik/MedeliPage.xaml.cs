@@ -16,13 +16,18 @@ using System.Threading;
 using Ngebatik.Kelas;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
+using Microsoft.Phone.BackgroundAudio;
+
 using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 
 namespace Ngebatik
 {
-    public partial class MedeliPage : PhoneApplicationPage
+      public partial class MedeliPage : PhoneApplicationPage
     {
+
+        MediaElement backsoundButton = new MediaElement();
+        MediaElement backsoundgame = new MediaElement();
         private const float PreMultiplyFactor = 1 / 255f;
         private bool isFirstTap;
         const int width = 400;
@@ -39,7 +44,7 @@ namespace Ngebatik
         int detikCanting = 0;
         int detikBermain = 0;
         int waktuBasahKuas;
-        int waktubermain = 20;
+        int waktubermain = 10;
         Boolean kuasBasah = false;
         Boolean lihatBatikAsli = false;
         public static int scoreMedeli=100;
@@ -47,8 +52,12 @@ namespace Ngebatik
         private Boolean selectedcolor1;
 
         private Brush selectedColor = new SolidColorBrush(Colors.Black);
+       
+        private int dpi;
+        private string filename;
 
 
+                
         public MedeliPage()
         {
             isFirstTap = true;
@@ -60,12 +69,51 @@ namespace Ngebatik
                 ds.Interval = TimeSpan.FromSeconds(1);
                 dt.Tick += dt_Tick;
                 ds.Tick += ds_Tick;
+                this.LayoutRoot.Children.Add(backsoundButton);
+
+                backsoundButton.CurrentStateChanged += BacksoundButtonCurrentStateChanged;
+                backsoundButton.MediaEnded += BacksoundButton_MediaEnded;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
         }
+
+        private void BacksoundButtonCurrentStateChanged(object sender, RoutedEventArgs e)
+        {
+            switch (backsoundButton.CurrentState)
+            {
+                case System.Windows.Media.MediaElementState.AcquiringLicense:
+                    break;
+                case System.Windows.Media.MediaElementState.Buffering:
+                    break;
+                case System.Windows.Media.MediaElementState.Closed:
+                    break;
+                case System.Windows.Media.MediaElementState.Individualizing:
+                    break;
+                case System.Windows.Media.MediaElementState.Opening:
+                    break;
+                case System.Windows.Media.MediaElementState.Paused:
+                    break;
+                case System.Windows.Media.MediaElementState.Playing:
+                    break;
+                case System.Windows.Media.MediaElementState.Stopped:
+                    break;
+                default:
+                    break;
+            }
+
+            System.Diagnostics.Debug.WriteLine("CurrentState event " + backsoundButton.CurrentState.ToString());
+        }
+
+        private void BacksoundButton_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Ended event " + backsoundButton.CurrentState.ToString());
+            // Set the source to null, force a Close event in current state
+            backsoundButton.Source = null;
+        }
+
 
         private void ds_Tick(object sender, EventArgs e)
         {
@@ -124,7 +172,8 @@ namespace Ngebatik
         {
             //string msg;
 
-
+            backsoundButton.Source = new Uri("Audio/BacksoundGameplay.mp3", UriKind.RelativeOrAbsolute);
+            backsoundButton.Play();
 
             try
             {
@@ -309,6 +358,7 @@ namespace Ngebatik
             // var imagePen = (CompositeTransform) penBatik.RenderTransform;
             // imagePen.TranslateX = pointCollection[i].Position.X + 100;
             //imagePen.TranslateY = pointCollection[i].Position.Y - 290;
+
             selectedColor = ((Ellipse) sender).Fill;
             waktuBasahKuas = _rand.Next(7, 15);
             kuasBasah = true;
@@ -320,6 +370,28 @@ namespace Ngebatik
                 dt.Start();
             }
 
+
+            Helper.selectedColor = selectedColor;
+            Rectangle rect = new Rectangle();
+            rect.Height = 326;
+            rect.Width = 521;
+            rect.Fill = selectedColor;
+            canvasGambarBatik.Children.Add(rect);
+
+             foreach (Line oldLine in Helper.hasilNembok)
+            {
+                Line line = new Line();
+
+                line.X1 = oldLine.X1;
+                line.Y1 = oldLine.Y1;
+                line.X2 = oldLine.X2;
+                line.Y2 = oldLine.Y2;
+                line.Stroke = oldLine.Stroke;
+                line.Fill = oldLine.Fill;
+                line.StrokeThickness = oldLine.StrokeThickness;
+
+                canvasGambarBatik.Children.Add(line);
+            }
         }
     }
 }

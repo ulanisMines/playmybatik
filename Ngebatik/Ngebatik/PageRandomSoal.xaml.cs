@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -20,6 +21,8 @@ namespace Ngebatik
 {
     public partial class PageRandomSoal : PhoneApplicationPage
     {
+        MediaElement backsoundButton = new MediaElement();
+        MediaElement backsoundgame = new MediaElement();
 
         //getsoalViewModel DataContext;
         private getsoalViewModel Soal;
@@ -29,11 +32,50 @@ namespace Ngebatik
 
             Soal = new getsoalViewModel();
             DataContext = Soal;
+            this.LayoutRoot.Children.Add(backsoundButton);
+
+            backsoundButton.CurrentStateChanged += BacksoundButtonCurrentStateChanged;
+            backsoundButton.MediaEnded += BacksoundButton_MediaEnded;
         }
 
+        private void BacksoundButtonCurrentStateChanged(object sender, RoutedEventArgs e)
+        {
+            switch (backsoundButton.CurrentState)
+            {
+                case System.Windows.Media.MediaElementState.AcquiringLicense:
+                    break;
+                case System.Windows.Media.MediaElementState.Buffering:
+                    break;
+                case System.Windows.Media.MediaElementState.Closed:
+                    break;
+                case System.Windows.Media.MediaElementState.Individualizing:
+                    break;
+                case System.Windows.Media.MediaElementState.Opening:
+                    break;
+                case System.Windows.Media.MediaElementState.Paused:
+                    break;
+                case System.Windows.Media.MediaElementState.Playing:
+                    break;
+                case System.Windows.Media.MediaElementState.Stopped:
+                    break;
+                default:
+                    break;
+            }
+
+            System.Diagnostics.Debug.WriteLine("CurrentState event " + backsoundButton.CurrentState.ToString());
+        }
+
+        private void BacksoundButton_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Ended event " + backsoundButton.CurrentState.ToString());
+            // Set the source to null, force a Close event in current state
+            backsoundButton.Source = null;
+        }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            backsoundButton.Source = new Uri("Audio/backsound.mp3", UriKind.RelativeOrAbsolute);
+            backsoundButton.Play();
             base.OnNavigatedTo(e);
 
             string msg = "null";
@@ -44,65 +86,32 @@ namespace Ngebatik
             }
         }
 
-        //public void LoadURL(String level)
-        //{
-        //    //MessageBox.Show(level);
-        //    WebClient wcSoalBatik = new WebClient();
-        //    wcSoalBatik.DownloadStringCompleted += new DownloadStringCompletedEventHandler(DownloadSoalBatik);
-        //    wcSoalBatik.DownloadStringAsync(new Uri(Helper.BASE + "getsoal.php?Level=" + level));
-        //}
-
-        //private void DownloadSoalBatik(object sender, DownloadStringCompletedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        JObject jRoot = JObject.Parse(e.Result);
-        //        //MessageBox.Show(e.Result);
-        //        JArray jItem = JArray.Parse(jRoot.SelectToken("result").ToString());
-        //        foreach (JObject item in jItem)
-        //        {
-        //            getsoal gs = new getsoal();
-        //            gs.idSoal = item.SelectToken("idSoal").ToString();
-        //            gs.Pertanyaan = item.SelectToken("Pertanyaan").ToString();
-        //            gs.Level = item.SelectToken("Level").ToString();
-        //            gs.OpsiA = Helper.img_BASE + item.SelectToken("OpsiA").ToString();
-        //            gs.OpsiB = Helper.img_BASE + item.SelectToken("OpsiB").ToString();
-        //            gs.Jawaban = item.SelectToken("Jawaban").ToString();
-
-        //         //  GetSoalCollection.Add(gs);
-        //        }
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
 
         private void BindingOpsiBOnClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            Image gambar = (Image) sender;
-        //    if (Soal.GetSoalCollection[0].OpsiB == Soal.GetSoalCollection[0].Jawaban)
-           // {
+            Image gambar = (Image)sender;
+            if (Soal.GetSoalCollection[0].OpsiB == Soal.GetSoalCollection[0].Jawaban)
+            {
                 NavigationService.Navigate(new Uri("/PageSoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Maaf, jawaban salah.");
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Jawaban anda salah, silahkan ulangi”");
+            }
         }
 
         private void BindingOpsiAOnClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            Image gambar = (Image) sender;
-     // if (Soal.GetSoalCollection[0].OpsiA == Soal.GetSoalCollection[0].Jawaban)
-      //{
-          NavigationService.Navigate(new Uri("/pagesoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
-      //}
-      //else
-      //{
-         
-         // MessageBox.Show("Maaf, Jawaban Salah");
-      //}
+            Image gambar = (Image)sender;
+            if (Soal.GetSoalCollection[0].OpsiA == Soal.GetSoalCollection[0].Jawaban)
+            {
+                NavigationService.Navigate(new Uri("/pagesoal.xaml?gambar=" + gambar.Tag.ToString(), UriKind.Relative));
+            }
+            else
+            {
+
+                MessageBox.Show("Jawaban anda salah, silahkan ulangi”");
+            }
         }
 
     }

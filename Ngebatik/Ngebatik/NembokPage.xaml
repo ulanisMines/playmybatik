@@ -38,12 +38,12 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot"  Background="#FFFBE7D3">
-        <Image x:Name="imagePolaBatik" HorizontalAlignment="Center" Height="326" VerticalAlignment="Top" Width="521" Margin="233,5,46,0" Stretch="Fill">
+        <Image x:Name="imagePolaBatik" HorizontalAlignment="Center" Height="326" VerticalAlignment="Top" Width="521" Margin="160,2,119,0" Stretch="Fill">
             <Image.RenderTransform>
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
-        <Canvas x:Name="canvasGambarBatik" Margin="233,5,46,92" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="canvasGambarBatik" Margin="-364,42,691,141" RenderTransformOrigin="0.5,0.5">
         	<Canvas.RenderTransform>
         		<CompositeTransform/>
         	</Canvas.RenderTransform>
@@ -66,14 +66,14 @@
                 </Grid>
 
             </StackPanel>
-            <TextBlock x:Name="waktuBasahKuasText" Text="0" HorizontalAlignment="Right" Margin="0,-295,633,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="36"/>
-            <Button x:Name="btnselesai"  HorizontalAlignment="Left" Margin="624,0,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click_1" BorderThickness="0" Height="92" Visibility="Collapsed">
+           
+            <Button x:Name="btnselesai" Visibility="Visible" HorizontalAlignment="Left" Margin="624,0,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click_1" BorderThickness="0" Height="92" >
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/Asset/button/ceklis fix.png"/>
                 </Button.Background>
             </Button>
         </Grid>
-        <Image x:Name="imageBatik" HorizontalAlignment="Center" Height="326" VerticalAlignment="Top" Width="521" Margin="233,-326,46,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
+        <Image x:Name="imageBatik" HorizontalAlignment="Center" Height="326" VerticalAlignment="Top" Width="521" Margin="165,-326,114,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
         	<Image.RenderTransform>
         		<CompositeTransform/>
         	</Image.RenderTransform>
@@ -83,15 +83,15 @@
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="panahImage" HorizontalAlignment="Left" Height="40" Margin="112,10,0,0" VerticalAlignment="Top" Width="44" Source="/Asset/panah bawah.png" ManipulationDelta="Pen_Drag" RenderTransformOrigin="0.444,0.507" Tap="panahImage_Tap" >
+        <Image x:Name="panahImage" HorizontalAlignment="Left" Height="40" Margin="87,5,0,0" VerticalAlignment="Top" Width="44" Source="/Asset/panah bawah.png" ManipulationDelta="Pen_Drag" RenderTransformOrigin="0.444,0.507" Tap="panahImage_Tap" >
             <Image.RenderTransform>
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="WaktuBermainText" HorizontalAlignment="Left" Margin="95,93,0,0" TextWrapping="Wrap" Text="0" Foreground="Black" FontSize="36" VerticalAlignment="Top" Height="50" Width="61"/>
+        
         <TextBlock HorizontalAlignment="Left" Margin="395,417,0,0" TextWrapping="Wrap" Text="Score" Foreground="Black" VerticalAlignment="Top" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink" FontSize="40" />
         <TextBlock x:Name="scoreNgelowongText" HorizontalAlignment="Left" Margin="471,409,0,0" TextWrapping="Wrap" Text="0" Foreground="Black" FontSize="36" VerticalAlignment="Top" RenderTransformOrigin="-0.135,0.499" />
-        <Image HorizontalAlignment="Left" Height="59" Margin="0,98,0,0" VerticalAlignment="Top" Width="66" Source="/Asset/button/button-clock.png" />
+       
         <TextBlock HorizontalAlignment="Left" Margin="286,345,0,0" TextWrapping="Wrap" Text="Tahap 2 - Nembok" VerticalAlignment="Top" Width="231" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink" FontSize="45" Foreground="Black" Height="38"/>
     </Grid>
 

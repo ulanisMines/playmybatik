@@ -99,6 +99,19 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="canvas.cs" />
+    <Compile Include="PatternRecognition.xaml.cs">
+      <DependentUpon>PatternRecognition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHelp2.xaml.cs">
+      <DependentUpon>ViewHelp2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHelp4.xaml.cs">
+      <DependentUpon>ViewHelp4.Xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHelp3.xaml.cs">
+      <DependentUpon>ViewHelp3.Xaml</DependentUpon>
+    </Compile>
     <Compile Include="KontenAlatBatik.xaml.cs">
       <DependentUpon>KontenAlatBatik.xaml</DependentUpon>
     </Compile>
@@ -174,6 +187,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="PatternRecognition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewHelp2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewHelp4.Xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewHelp3.Xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="KontenAlatBatik.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -248,8 +277,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Asset\BatikCorak.png" />
-    <Content Include="Asset\BatikCoraks.png" />
+    <Content Include="Asset\button\Btn1.png" />
+    <Content Include="Asset\button\Btn10.png" />
+    <Content Include="Asset\button\Btn11.png" />
+    <Content Include="Asset\button\Btn2.png" />
+    <Content Include="Asset\button\Btn3.png" />
+    <Content Include="Asset\button\Btn4.png" />
+    <Content Include="Asset\button\Btn5.png" />
+    <Content Include="Asset\button\Btn6.png" />
+    <Content Include="Asset\button\Btn7.png" />
+    <Content Include="Asset\button\Btn8.png" />
+    <Content Include="Asset\button\Btn9.png" />
     <Content Include="Asset\button\buttongy.png" />
     <Content Include="Asset\button\ceklis fix.png" />
     <Content Include="Asset\button\easy.png" />
@@ -259,6 +297,19 @@
     <Content Include="Asset\Fonts\Museo300-Regular.otf" />
     <Content Include="Asset\in game screen larger.png" />
     <Content Include="Asset\new logos.png" />
+    <Content Include="Asset\wp_ss_20140717_0005.png" />
+    <Content Include="Audio\BacksoundGameplay.mp3" />
+    <Content Include="Audio\BacksoundGameplay2.mp3" />
+    <Content Include="Audio\backsound.mp3" />
+    <Content Include="PeralatanBatik\canting.png" />
+    <Content Include="PeralatanBatik\bandul.png" />
+    <Content Include="PeralatanBatik\dhingklik.png" />
+    <Content Include="PeralatanBatik\gawangan.png" />
+    <Content Include="PeralatanBatik\kompor.png" />
+    <Content Include="PeralatanBatik\lilin.png" />
+    <Content Include="PeralatanBatik\mori.png" />
+    <Content Include="PeralatanBatik\pewarnaalami.png" />
+    <Content Include="PeralatanBatik\wajan.png" />
     <Content Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -268,11 +319,7 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Asset\0190871_l.jpg" />
-    <Content Include="Asset\button\button - Copy.png" />
-    <Content Include="Asset\button\button-book - Copy.png" />
     <Content Include="Asset\button\button-book.png" />
-    <Content Include="Asset\button\button-clock - Copy.png" />
     <Content Include="Asset\button\button-clock.png" />
     <Content Include="Asset\button\button-help.png" />
     <Content Include="Asset\button\button-info.png" />
@@ -280,12 +327,7 @@
     <Content Include="Asset\button\button-play.png" />
     <Content Include="Asset\button\button-setting.png" />
     <Content Include="Asset\button\button.png" />
-    <Content Include="Asset\Halaman Soal.png" />
     <Content Include="Asset\in game screen 2.png" />
-    <Content Include="Asset\Level Membatik.png" />
-    <Content Include="Asset\levelmudah.png" />
-    <Content Include="Asset\LevelSedang.png" />
-    <Content Include="Asset\Levelsusah.png" />
     <Content Include="Asset\Logo Play My Batik.png" />
     <Content Include="Asset\main screen2.jpg" />
     <Content Include="Asset\panah atas.png" />
@@ -293,11 +335,9 @@
     <Content Include="Asset\Pen.png" />
     <Content Include="Asset\play my batik logos-1.png" />
     <Content Include="Asset\play my batik logos.png" />
-    <Content Include="Asset\tteh.png" />
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Soal\batik soal 1.jpg" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>

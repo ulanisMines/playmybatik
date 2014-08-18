@@ -43,7 +43,7 @@
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
-        <Canvas x:Name="canvasGambarBatik" Height="326" VerticalAlignment="Top" Width="521" Margin="140,0,139,0" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="canvasGambarBatik" Height="326" VerticalAlignment="Top" Width="521" Margin="140,10,139,0" RenderTransformOrigin="0.5,0.5">
         	<Canvas.RenderTransform>
         		<CompositeTransform/>
         	</Canvas.RenderTransform>

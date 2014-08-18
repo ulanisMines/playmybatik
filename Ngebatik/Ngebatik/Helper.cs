@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Shapes;
 using Ngebatik.Kelas;
 using Ngebatik.View_Model;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Ngebatik
 {
@@ -16,8 +18,10 @@ namespace Ngebatik
         public static string Level = "";
         public static List<Line> hasilNgelowong;
         public static getfilosofi hasilDownload;
-        public static List<Line> hasilNembok; 
-
+        public static List<Line> hasilNembok;
+        public static Brush selectedColor;
+        public static BitmapImage TrueGambarBatik;
+        public static WriteableBitmap wbGambarBatik;
         public static string GambarBatik { get; set; }
     }
 }

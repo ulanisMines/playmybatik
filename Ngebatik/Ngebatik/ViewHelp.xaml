@@ -24,17 +24,33 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Help" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" Foreground="#FF080808"/>
-        </StackPanel>
+        
+            <TextBlock Margin="10,-19,-1,367" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" Foreground="#FF080808" FontFamily="Asset/Fonts/elegant_ink.ttf#Elegant Ink" Grid.Row="1">
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="Bantuan"/>
+        </TextBlock>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="1. Gambarlah Batik pada bagian luar pinggiran terlebih dahulu" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-            <TextBlock Text="2. Gambarkan Batik pada bagian luar terlebih dahulu" Margin="0,49,0,0" TextAlignment="Center"></TextBlock>
-            <TextBlock Text="3. Celupkan Batik pada masa pewarnaan" TextAlignment="Center" Margin="0,101,0,0"></TextBlock>
-            <TextBlock Text="4. Bersihkan Batik dengan air bersih" TextAlignment="Center" Margin="0,161,0,0" FontFamily="Segoe UI Symbol"></TextBlock>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="95,118,10,69">
+            <Image HorizontalAlignment="Left" Height="234" Margin="0,24,0,0" VerticalAlignment="Top" Width="344" Source="/Asset/wp_ss_20140717_0005.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Center" Height="47" Margin="362,24,87,222" TextWrapping="Wrap" Text="1. Ngelowong" VerticalAlignment="Center" Width="246" FontWeight="ExtraBold" TextAlignment="Center" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="362,71,0,0" TextWrapping="Wrap" Text="Pada tahap pertama ini kamu harus menggambar bagian-bagian luar dari pola membatik. Penuhilah garis hitam yang terdapat gambar dengan warna batik yang sesuai" VerticalAlignment="Top" Height="172" Width="286" Foreground="Black"  />
+
         </Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="417,398,0,0" Grid.Row="1" VerticalAlignment="Top" Height="78" Width="98" BorderThickness="0" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/Asset/button/button-play.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush Stretch="Uniform"/>
+            </Button.Foreground>
+        </Button>
+        <Button Content="Skip" Foreground="Black" HorizontalAlignment="Left" Margin="274,398,0,0" Grid.Row="1" VerticalAlignment="Top" Width="143" Height="82" BorderThickness="0" Click="Button_Click_2">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/Asset/button/buttongy.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 
 </phone:PhoneApplicationPage>
